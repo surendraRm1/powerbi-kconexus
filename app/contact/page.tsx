@@ -33,7 +33,10 @@ export default function ContactPage() {
                                 </div>
                                 <div className="text-sm">
                                     <p className="font-bold text-navy-900 mb-1">Email Us</p>
-                                    <a href={`mailto:${site.email}`} className="text-ink-500 hover:text-openbi-green transition-colors">{site.email}</a>
+                                    <div className="space-y-1">
+                                        <a href={`mailto:${site.emails[0]}`} className="block text-ink-500 hover:text-openbi-green transition-colors">{site.emails[0]}</a>
+                                        <a href={`mailto:${site.emails[1]}`} className="block text-ink-500 hover:text-openbi-green transition-colors">{site.emails[1]}</a>
+                                    </div>
                                 </div>
                             </li>
                             <li className="flex gap-4">

@@ -165,15 +165,20 @@ export default function HomePage() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-start gap-4">
                                 <div className="w-10 h-10 rounded-full bg-navy-50 flex items-center justify-center shrink-0">
                                     <LucideMail className="text-navy-900" size={18} />
                                 </div>
                                 <div>
                                     <p className="text-xs font-bold text-gray-400 uppercase mb-1">Email Us</p>
-                                    <a href={`mailto:${site.email}`} className="text-sm font-medium text-navy-900 hover:text-openbi-green transition-colors">
-                                        {site.email}
-                                    </a>
+                                    <div className="space-y-1">
+                                        <a href={`mailto:${site.emails[0]}`} className="block text-sm font-medium text-navy-900 hover:text-openbi-green transition-colors">
+                                            {site.emails[0]}
+                                        </a>
+                                        <a href={`mailto:${site.emails[1]}`} className="block text-sm font-medium text-navy-900 hover:text-openbi-green transition-colors">
+                                            {site.emails[1]}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

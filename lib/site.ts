@@ -2,6 +2,7 @@ export const site = {
     name: "KCONexus",
     domain: "kconexus.com",
     email: "contact@kconexus.com",
+    emails: ["Surendra@kconexus.com", "prashant@kconexus.com"],
     phone: "+91 9110822188",
     company: "KCONexus",
     designation: "Lead Consultant",
