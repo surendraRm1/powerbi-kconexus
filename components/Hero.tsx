@@ -13,10 +13,10 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
                             If Groceries just take <span className="text-openbi-green">10 mins</span> to deliver, <br className="hidden md:block" />
                             Why not <span className="text-openbi-green">MIS reports?</span>
-                        </h2>
+                        </h1>
                         <p className="text-xl md:text-2xl leading-tight font-bold text-white/90 mb-8">
                             Turn Data into Decisions.<br />
                             Turn Decisions into Growth.
