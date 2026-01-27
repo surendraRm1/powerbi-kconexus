@@ -13,14 +13,14 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="text-xl md:text-2xl font-bold text-white mb-6 leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
                             If Groceries just take <span className="text-openbi-green">10 mins</span> to deliver, <br className="hidden md:block" />
                             Why not <span className="text-openbi-green">MIS reports?</span>
-                        </p>
-                        <h1 className="text-3xl md:text-5xl leading-tight font-extrabold text-white mb-8">
+                        </h2>
+                        <p className="text-xl md:text-2xl leading-tight font-bold text-white/90 mb-8">
                             Turn Data into Decisions.<br />
                             Turn Decisions into Growth.
-                        </h1>
+                        </p>
                         <p className="text-lg text-white/80 mb-8 max-w-xl">
                             Don’t just collect data—command it. KCONexus delivers cutting-edge analytics and expert
                             solutions designed to scale your business and sharpen your competitive edge.
