@@ -6,26 +6,37 @@ export default function AboutPage() {
     return (
         <div className="pt-10">
             <Section
-                eyebrow="Who we are"
-                title="We build BI that people actually use."
-                subtitle="KCONexus is a specialized consultancy focused on modernizing business intelligence through Power BI, advanced data engineering, and governed analytics."
+                eyebrow="The KCOnexus Story"
+                title="Revolutionizing Business Intelligence."
+                subtitle="Founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra, KCOnexus was established to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
             >
                 <div className="grid gap-12 md:grid-cols-2 items-center mb-20">
                     <div className="rounded-3xl border bg-gray-50 aspect-video overflow-hidden shadow-xl">
                         <div className="w-full h-full bg-[url('https://openbi.ai/assets/img/hero-img.png')] bg-cover bg-center" />
                     </div>
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-bold">Our Philosophy</h3>
-                        <p className="text-ink-500 leading-relaxed">
-                            Most organizations suffer from "report bloat" — too many dashboards that nobody trusts.
-                            We believe in the power of simplicity. We work with teams to define lean,
-                            standardized KPIs and build the high-performance pipelines needed to serve them.
-                        </p>
-                        <p className="text-ink-500 leading-relaxed">
-                            Our team consists of certified Power BI experts, data engineers, and strategic
-                            analysts who understand both the technology and the business logic behind the numbers.
-                        </p>
-                        <Link href="/contact" className="btn-primary inline-block">
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-xl font-bold mb-3">A Powerhouse of Talent, Built for Speed</h3>
+                            <p className="text-ink-500 leading-relaxed">
+                                What began as a visionary startup has rapidly expanded into a powerhouse of technical talent. At KCOnexus, we believe that world-class automation requires world-class experts. Today, we are proud to be powered by a dedicated team of 36 Power BI experts, including a core leadership group of 8 senior specialists. This rapid growth reflects our unwavering commitment to excellence and our unique ability to scale complex intelligence solutions for businesses across every industry.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold mb-3">Redefining the Industry Standard</h3>
+                            <p className="text-ink-500 leading-relaxed">
+                                While the industry standard for complex Business Intelligence implementation typically takes weeks or even months, we have mastered the art of speed and precision. By combining our deep technical expertise with our proprietary automation framework, we have successfully deployed over 150+ Live Projects.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold mb-3">Our Core Mission</h3>
+                            <p className="text-ink-500 leading-relaxed mb-4">
+                                To empower organizations with Zero-Lag Intelligence. By automating the "Connecting" and "Processing" phases of data, we allow your leadership to spend 0% of their time preparing data and 100% of their time acting on it.
+                            </p>
+                            <blockquote className="border-l-4 border-openbi-green pl-4 italic text-ink-600 font-medium bg-gray-50 py-2 pr-2 rounded-r-md">
+                                "At KCOnexus, we don't just show you your data—we give you back your time."
+                            </blockquote>
+                        </div>
+                        <Link href="/contact" className="btn-primary inline-block mt-4">
                             Work With Us
                         </Link>
                     </div>
@@ -33,9 +44,9 @@ export default function AboutPage() {
 
                 <div className="grid gap-8 md:grid-cols-3">
                     {[
-                        { t: "Clarity", d: "Dashboards designed for action, not decoration. We prioritize usability and storytelling over complex features.", i: <LucideBarChart3 className="text-openbi-green" /> },
-                        { t: "Reliability", d: "Clean pipelines with automated checks and governance. We ensure your data is always accurate and up-to-date.", i: <LucideTarget className="text-openbi-green" /> },
-                        { t: "Speed", d: "Faster reporting cycles and fewer manual steps. We automate the 'boring stuff' so your team can focus on insights.", i: <LucideZap className="text-openbi-green" /> },
+                        { t: "The 10-Minute Benchmark", d: "We have perfected our automation framework to the point where we can deliver actionable BI reports within 10 minutes of system integration.", i: <LucideZap className="text-openbi-green" /> },
+                        { t: "Live Ecosystem Connectivity", d: "We don't believe in static data. Our core capability lies in Live System Integration, ensuring your dashboards reflect what is happening in your business right now, not yesterday.", i: <LucideRotateCcw className="text-openbi-green" /> },
+                        { t: "Automation-First Philosophy", d: "We specialize in the end-to-end automation of data pipelines. From connecting to your ERP to cleaning and visualizing data, we remove the human bottleneck entirely.", i: <LucideCode2 className="text-openbi-green" /> },
                     ].map((item) => (
                         <div key={item.t} className="card-openbi group">
                             <div className="mb-4 p-3 bg-gray-50 rounded-lg inline-block group-hover:bg-openbi-green/10 transition-colors">
