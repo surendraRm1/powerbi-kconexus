@@ -13,6 +13,9 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
+                        <p className="text-lg md:text-xl font-medium text-openbi-green mb-4">
+                            If Groceries just take 10 mins to deliver, Why not MIS reports?
+                        </p>
                         <h1 className="text-4xl md:text-[56px] leading-[1.1] font-extrabold text-white mb-8">
                             Turn Data into Decisions.<br />
                             Turn Decisions into Growth.
