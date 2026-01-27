@@ -21,9 +21,7 @@ export default function Navbar() {
         <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav shadow-lg" : "bg-navy-900"}`}>
             <div className="container-pad flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center">
-                    <span className="text-2xl font-bold text-white">
-                        <span className="text-openbi-green">KCO</span>Nexus
-                    </span>
+                    <img src="/assets/logo.png" alt="KCONexus" className="h-12 w-auto object-contain" />
                 </Link>
 
                 <nav className="hidden md:flex gap-12 items-center text-[15px] font-semibold text-white ml-auto">
