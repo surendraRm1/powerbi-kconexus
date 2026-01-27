@@ -12,7 +12,7 @@ export default function AboutPage() {
             >
                 <div className="grid gap-12 md:grid-cols-2 items-center mb-20">
                     <div className="rounded-3xl border bg-gray-50 aspect-video overflow-hidden shadow-xl">
-                        <div className="w-full h-full bg-[url('/assets/about-hero.png')] bg-cover bg-center" />
+                        <div className="w-full h-full bg-[url('/assets/about-dashboard.jpg')] bg-cover bg-center" />
                     </div>
                     <div className="space-y-8">
                         <div>
