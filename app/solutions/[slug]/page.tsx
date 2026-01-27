@@ -22,14 +22,14 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
         <div className="pt-20">
             {/* Hero Section */}
             <header
-                className={`py-24 text-white text-center relative overflow-hidden ${slug !== 'asset-management' ? 'hero-gradient' : ''}`}
-                style={slug === 'asset-management' ? {
-                    backgroundImage: "url('/assets/asset-management-bg.png')",
+                className={`py-24 text-white text-center relative overflow-hidden ${!data.backgroundImg ? 'hero-gradient' : ''}`}
+                style={data.backgroundImg ? {
+                    backgroundImage: `url('${data.backgroundImg}')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 } : {}}
             >
-                {slug === 'asset-management' && (
+                {data.backgroundImg && (
                     <div className="absolute inset-0 bg-navy-900/80 z-0" />
                 )}
 

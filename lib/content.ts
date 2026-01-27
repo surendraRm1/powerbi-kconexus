@@ -29,7 +29,8 @@ export const solutionsData: Record<string, any> = {
             { title: "Cash Flow Management", desc: "Monitor liquidity positions and optimize working capital with live dashboards." },
             { title: "Expense Analytics", desc: "Identify cost-saving opportunities and track department-wise spending patterns." },
             { title: "Financial Consolidation", desc: "Merge data from multiple entities and currencies into a single source of truth." },
-        ]
+        ],
+        backgroundImg: "/assets/finance-bull-bear.png"
     },
     "hr-analytics": {
         title: "HR Analytics",
@@ -40,7 +41,8 @@ export const solutionsData: Record<string, any> = {
             { title: "Performance Tracking", desc: "Align individual goals with organizational KPIs through transparent reporting." },
             { title: "Retention Analysis", desc: "Identify churn risks and build proactive employee engagement programs." },
             { title: "Payroll & Billing", desc: "Automate workforce cost allocation and billing cycles with precision." },
-        ]
+        ],
+        backgroundImg: "/assets/office-culture.png"
     },
     "asset-management": {
         title: "Asset Management",
@@ -51,7 +53,8 @@ export const solutionsData: Record<string, any> = {
             { title: "Preventive Maintenance", desc: "Reduce downtime by scheduling and tracking regular maintenance tasks." },
             { title: "Depreciation Modeling", desc: "Automate financial calculations for asset value over time." },
             { title: "Inventory Optimization", desc: "Maintain ideal stock levels and reduce holding costs using predictive data." },
-        ]
+        ],
+        backgroundImg: "/assets/asset-management-bg.png"
     },
     "construction-cost-database": {
         title: "Construction Cost Database",
@@ -62,7 +65,20 @@ export const solutionsData: Record<string, any> = {
             { title: "Vendor Management", desc: "Compare supplier prices and track performance against historical data." },
             { title: "Margin Analysis", desc: "Real-time identification of cost overruns and profit leakages." },
             { title: "Resource Allocation", desc: "Optimize deployments based on project priority and labor availability." },
-        ]
+        ],
+        backgroundImg: "/assets/meeting-charts.png"
+    },
+    "sales-marketing-analytics": {
+        title: "Sales & Marketing Analytics",
+        heroSubtitle: "Align your sales and marketing efforts with data-backed insights into customer behavior and campaign performance.",
+        intro: "Drive revenue growth by understanding every touchpoint in your customer journey with our unified Sales & Marketing solutions.",
+        features: [
+            { title: "Pipeline Velocity", desc: "Track leads from acquisition to close and identify bottlenecks." },
+            { title: "Campaign ROI", desc: "Measure the true impact of your marketing spend across channels." },
+            { title: "Customer Segmentation", desc: "Target high-value cohorts with personalized messaging." },
+            { title: "Forecast Accuracy", desc: "Improve revenue predictability with AI-driven sales forecasting." },
+        ],
+        backgroundImg: "/assets/presentation-meeting.png"
     }
 };
 
