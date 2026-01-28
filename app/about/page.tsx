@@ -7,10 +7,15 @@ export default function AboutPage() {
     return (
         <div className="pt-10">
             <Section
-                eyebrow="The KCOnexus Story"
-                title="Revolutionizing Business Intelligence."
-                subtitle="Founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra, KCOnexus was established to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
+                eyebrow="Our Story"
+                title="Revolutionizing Business Intelligence"
+                subtitle="KCOnexus was founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
             >
+                {/* 50 Years of Excellence Section */}
+                <div className="mb-20">
+                    <KumbhatCredibility />
+                </div>
+
                 <div className="max-w-4xl mx-auto mb-20">
                     <div className="space-y-8">
                         <div>
@@ -100,12 +105,6 @@ export default function AboutPage() {
                     </div>
                 </div>
             </Section>
-
-            {/* Kumbhat Credibility Section */}
-            <Section className="py-24">
-                <KumbhatCredibility />
-            </Section>
-
 
             {/* Vision / Mission Section */}
             <Section className="bg-navy-900 text-white">

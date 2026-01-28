@@ -13,7 +13,8 @@ import {
     LucideMegaphone,
     LucideCreditCard,
     LucideClipboardList,
-    LucideLeaf
+    LucideLeaf,
+    LucideArrowRight
 } from "lucide-react";
 
 const solutions = [
@@ -81,22 +82,30 @@ const solutions = [
 
 export default function SolutionsGrid() {
     return (
-        <div className="flex flex-wrap justify-center gap-4">
-            {solutions.map((s) => (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {solutions.map((item, idx) => (
                 <Link
-                    key={s.title}
-                    href={`/solutions/${s.title.toLowerCase().replace(/ /g, "-")}`}
-                    className="flex items-center gap-4 bg-white hover:bg-navy-900 border border-navy-100 hover:border-navy-900 rounded-2xl px-8 py-4 shadow-sm hover:shadow-xl transition-all group"
+                    key={item.title}
+                    href={`/solutions/${item.title.toLowerCase().replace(/ /g, "-")}`}
+                    className="bg-white rounded-3xl p-8 border border-gray-100 hover:border-openbi-green/30 hover:shadow-2xl hover:shadow-openbi-green/5 transition-all group flex flex-col justify-between"
                 >
-                    <div className={`w-10 h-10 rounded-xl ${s.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                        {s.icon}
+                    <div>
+                        <div className={`w-12 h-12 bg-navy-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-openbi-green/10 transition-colors`}>
+                            <div className="text-navy-900 group-hover:text-openbi-green transition-colors">
+                                {item.icon}
+                            </div>
+                        </div>
+                        <h3 className="text-xl font-bold text-navy-900 mb-3 group-hover:text-openbi-green transition-colors">
+                            {item.title}
+                        </h3>
+                        <p className="text-sm text-ink-500 leading-relaxed mb-6">
+                            {item.desc}
+                        </p>
                     </div>
-                    <span className="text-lg font-bold text-navy-900 group-hover:text-white transition-colors">
-                        {s.title}
-                    </span>
-                    <svg className="w-5 h-5 text-openbi-green group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <div className="flex items-center gap-2 text-navy-900 font-bold text-sm tracking-wide">
+                        Explore Solution
+                        <LucideArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </div>
                 </Link>
             ))}
         </div>

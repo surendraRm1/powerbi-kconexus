@@ -68,18 +68,6 @@ export default function HomePage() {
             {/* Process Section */}
             <ProcessSection />
 
-            {/* Three Pillars Section */}
-            <Section
-                title="Three Core Solutions"
-                subtitle="Clear entry points for CFOs and COOs to transform their operations"
-                className="bg-surface-50"
-                center
-            >
-                <ThreePillars />
-            </Section>
-
-
-
             {/* Services */}
             <Section
                 id="services"
@@ -108,7 +96,6 @@ export default function HomePage() {
                 id="solutions"
                 eyebrow="Solutions"
                 title="Solution Accelerators"
-                subtitle="High-revenue frameworks engineered for Indian statutory compliance, audit rigor, and operational excellence."
             >
                 <SolutionsGrid />
             </Section>
@@ -118,7 +105,6 @@ export default function HomePage() {
                 id="resources"
                 eyebrow="Portfolio"
                 title="Samples & Insights"
-                subtitle="Explore our library of Power BI samples and real-world case studies."
             >
                 <ResourcesTabs />
             </Section>
@@ -145,8 +131,6 @@ export default function HomePage() {
                 <TechStack />
             </Section>
 
-
-
             {/* Lead Magnet */}
             <Section
                 eyebrow="Free Resource"
@@ -156,6 +140,7 @@ export default function HomePage() {
             >
                 <LeadMagnet />
             </Section>
+
 
             {/* Final CTA / Contact */}
             <Section
@@ -222,7 +207,7 @@ export default function HomePage() {
                         <ContactForm />
                     </div>
                 </div>
-            </Section>
+            </Section >
         </>
     );
 }
