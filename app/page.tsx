@@ -17,22 +17,6 @@ export default function HomePage() {
     return (
         <>
             <Hero />
-            {/* Process Section */}
-            <ProcessSection />
-
-            {/* Three Pillars Section */}
-            <Section
-                eyebrow="How We Solve"
-                title="Three Core Solutions"
-                subtitle="Clear entry points for CFOs and COOs to transform their operations"
-                className="bg-surface-50"
-                center
-            >
-                <ThreePillars />
-            </Section>
-
-
-
             {/* Digital Transformation Section */}
             <Section
                 eyebrow="Digital Transformation"
@@ -80,6 +64,21 @@ export default function HomePage() {
                     </div>
                 </div>
             </Section>
+
+            {/* Process Section */}
+            <ProcessSection />
+
+            {/* Three Pillars Section */}
+            <Section
+                title="Three Core Solutions"
+                subtitle="Clear entry points for CFOs and COOs to transform their operations"
+                className="bg-surface-50"
+                center
+            >
+                <ThreePillars />
+            </Section>
+
+
 
             {/* Services */}
             <Section

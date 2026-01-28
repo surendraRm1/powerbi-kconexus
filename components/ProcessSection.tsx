@@ -6,8 +6,7 @@ import Section from "./Section";
 export default function ProcessSection() {
     return (
         <Section
-            eyebrow="Our Process"
-            title="How We Work"
+            title="Our Process: How We Work"
             subtitle="A streamlined methodology that ensures project success and measurable impact."
             className="bg-surface-50"
             center

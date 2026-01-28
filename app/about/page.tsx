@@ -11,10 +11,7 @@ export default function AboutPage() {
                 title="Revolutionizing Business Intelligence."
                 subtitle="Founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra, KCOnexus was established to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
             >
-                <div className="grid gap-12 md:grid-cols-2 items-center mb-20">
-                    <div className="rounded-3xl border bg-gray-50 aspect-video overflow-hidden shadow-xl">
-                        <div className="w-full h-full bg-[url('/assets/about-dashboard.jpg')] bg-cover bg-center" />
-                    </div>
+                <div className="max-w-4xl mx-auto mb-20">
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-xl font-bold mb-3">A Powerhouse of Talent, Built for Speed</h3>
@@ -43,21 +40,6 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-3 mb-24">
-                    {[
-                        { t: "The 10-Minute Benchmark", d: "We have perfected our automation framework to the point where we can deliver actionable BI reports within 10 minutes of system integration.", i: <LucideZap className="text-openbi-green" /> },
-                        { t: "Live Ecosystem Connectivity", d: "We don't believe in static data. Our core capability lies in Live System Integration, ensuring your dashboards reflect what is happening in your business right now, not yesterday.", i: <LucideRotateCcw className="text-openbi-green" /> },
-                        { t: "Automation-First Philosophy", d: "We specialize in the end-to-end automation of data pipelines. From connecting to your ERP to cleaning and visualizing data, we remove the human bottleneck entirely.", i: <LucideCode2 className="text-openbi-green" /> },
-                    ].map((item) => (
-                        <div key={item.t} className="card-openbi group">
-                            <div className="mb-4 p-3 bg-gray-50 rounded-lg inline-block group-hover:bg-openbi-green/10 transition-colors">
-                                {item.i}
-                            </div>
-                            <div className="text-lg font-bold mb-3">{item.t}</div>
-                            <div className="text-sm text-ink-500 leading-relaxed">{item.d}</div>
-                        </div>
-                    ))}
-                </div>
 
                 {/* Leadership Section */}
                 <div className="max-w-4xl mx-auto mb-20">
@@ -117,6 +99,11 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
+            </Section>
+
+            {/* Kumbhat Credibility Section */}
+            <Section className="py-24">
+                <KumbhatCredibility />
             </Section>
 
 
