@@ -2,18 +2,13 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import ServiceCards from "@/components/ServiceCards";
 import SolutionsGrid from "@/components/SolutionsGrid";
-import ClientsStrip from "@/components/ClientsStrip";
 import ResourcesTabs from "@/components/ResourcesTabs";
-import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import ThreePillars from "@/components/ThreePillars";
-import IndustryLogos from "@/components/IndustryLogos";
 import TechStack from "@/components/TechStack";
-import KumbhatCredibility from "@/components/KumbhatCredibility";
-import ComparisonTable from "@/components/ComparisonTable";
+import ProcessSection from "@/components/ProcessSection";
 import LeadMagnet from "@/components/LeadMagnet";
 import Link from "next/link";
-import DemoVideo from "@/components/DemoVideo";
 import ROICalculator from "@/components/ROICalculator";
 import { LucideCpu, LucideLayers, LucideMapPin, LucideMail } from "lucide-react";
 import { site } from "@/lib/site";
@@ -22,10 +17,8 @@ export default function HomePage() {
     return (
         <>
             <Hero />
-            {/* Kumbhat Credibility Section */}
-            <Section className="py-24">
-                <KumbhatCredibility />
-            </Section>
+            {/* Process Section */}
+            <ProcessSection />
 
             {/* Three Pillars Section */}
             <Section
@@ -36,22 +29,6 @@ export default function HomePage() {
                 center
             >
                 <ThreePillars />
-            </Section>
-
-            {/* Demo Video Section */}
-            <Section
-                eyebrow="Quick Walkthrough"
-                title="See It In Action"
-                subtitle="Watch how our systems transform raw data into decision-ready insights in under 45 seconds."
-                center
-                className="pb-16"
-            >
-                <DemoVideo />
-            </Section>
-
-            {/* Industry Logos */}
-            <Section className="py-16">
-                <IndustryLogos />
             </Section>
 
 
@@ -170,20 +147,6 @@ export default function HomePage() {
             </Section>
 
 
-            {/* Comparison Table */}
-            <Section className="bg-surface-50">
-                <ComparisonTable />
-            </Section>
-
-            {/* Testimonials */}
-            <Section
-                eyebrow="Testimonials"
-                title="Trusted by Leaders"
-                subtitle="Success stories from companies that transformed their data culture with KCONexus."
-                center
-            >
-                <Testimonials />
-            </Section>
 
             {/* Lead Magnet */}
             <Section

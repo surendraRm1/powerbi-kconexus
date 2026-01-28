@@ -37,12 +37,6 @@ export default function Navbar() {
                             {n.label}
                         </Link>
                     ))}
-                    <Link
-                        href="/contact"
-                        className="bg-openbi-green text-white px-4 py-2 rounded-full font-black hover:bg-[#15c35b] transition-all shadow-lg hover:shadow-openbi-green/20 ml-2 whitespace-nowrap uppercase text-[10px] xl:text-[12px]"
-                    >
-                        Book Preparation
-                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}

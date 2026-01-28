@@ -1,5 +1,7 @@
 import Section from "@/components/Section";
 import { LucideCheckCircle2, LucideTrendingUp, LucideTarget, LucideAward } from "lucide-react";
+import IndustryLogos from "@/components/IndustryLogos";
+import Testimonials from "@/components/Testimonials";
 
 const successStories = [
     {
@@ -177,6 +179,22 @@ export default function SuccessStoriesPage() {
                         </div>
                     ))}
                 </div>
+            </Section>
+
+            {/* Industry Logos */}
+            <Section className="py-24 bg-surface-50" eyebrow="Trusted By" title="Trusted Across Industries" center>
+                <IndustryLogos />
+            </Section>
+
+            {/* Testimonials */}
+            <Section
+                eyebrow="Testimonials"
+                title="Trusted by Leaders"
+                subtitle="Success stories from companies that transformed their data culture with KCONexus."
+                center
+                className="bg-white"
+            >
+                <Testimonials />
             </Section>
 
             {/* CTA Section */}
