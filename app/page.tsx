@@ -22,6 +22,10 @@ export default function HomePage() {
     return (
         <>
             <Hero />
+            {/* Kumbhat Credibility Section */}
+            <Section className="py-24">
+                <KumbhatCredibility />
+            </Section>
 
             {/* Three Pillars Section */}
             <Section
@@ -165,10 +169,6 @@ export default function HomePage() {
                 <TechStack />
             </Section>
 
-            {/* Kumbhat Credibility Section */}
-            <Section className="py-24">
-                <KumbhatCredibility />
-            </Section>
 
             {/* Comparison Table */}
             <Section className="bg-surface-50">
