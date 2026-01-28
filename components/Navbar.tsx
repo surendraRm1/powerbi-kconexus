@@ -4,6 +4,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { useState, useEffect } from "react";
 import { LucideChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,44 +27,65 @@ export default function Navbar() {
                     </span>
                 </Link>
 
-                <nav className="hidden md:flex gap-12 items-center text-[15px] font-semibold text-white ml-auto">
+                <nav className="hidden lg:flex gap-2 xl:gap-6 items-center text-[11px] xl:text-[13px] font-bold text-white ml-auto pl-12">
                     {site.nav.map((n) => (
-                        <div
+                        <Link
                             key={n.label}
-                            className="relative group py-4"
-                            onMouseEnter={() => n.items && setOpenDropdown(n.label)}
-                            onMouseLeave={() => setOpenDropdown(null)}
+                            href={n.href}
+                            className={`hover:text-openbi-green transition-colors py-4 whitespace-nowrap uppercase tracking-tighter xl:tracking-widest border-b-2 border-transparent hover:border-openbi-green ${n.label === "Solution Accelerators" ? "text-openbi-green/90" : ""}`}
                         >
-                            <Link
-                                href={n.href}
-                                className="hover:text-openbi-green transition-colors flex items-center gap-1"
-                            >
-                                {n.label}
-                                {n.items && <LucideChevronDown size={14} className="group-hover:rotate-180 transition-transform" />}
-                            </Link>
-
-                            {n.items && openDropdown === n.label && (
-                                <div className="absolute top-full left-0 w-64 bg-white rounded-lg shadow-xl py-2 mt-0 border border-gray-100 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    {n.items.map((item) => (
-                                        <Link
-                                            key={item.label}
-                                            href={item.href}
-                                            className="block px-6 py-2 text-navy-900 hover:bg-navy-50 hover:text-openbi-green transition-colors text-sm font-bold"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
+                            {n.label}
+                        </Link>
                     ))}
                     <Link
                         href="/contact"
-                        className="bg-openbi-green text-white px-6 py-2.5 rounded-full font-black hover:bg-[#15c35b] transition-all shadow-lg hover:shadow-openbi-green/20"
+                        className="bg-openbi-green text-white px-4 py-2 rounded-full font-black hover:bg-[#15c35b] transition-all shadow-lg hover:shadow-openbi-green/20 ml-2 whitespace-nowrap uppercase text-[10px] xl:text-[12px]"
                     >
-                        Contact Us
+                        Book Preparation
                     </Link>
                 </nav>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="md:hidden text-white p-2"
+                    onClick={() => setOpenDropdown(openDropdown === "mobile" ? null : "mobile")}
+                >
+                    <div className="w-6 h-0.5 bg-white mb-1.5" />
+                    <div className="w-6 h-0.5 bg-white mb-1.5" />
+                    <div className="w-4 h-0.5 bg-white ml-auto" />
+                </button>
+
+                {/* Mobile Menu Overlay */}
+                <AnimatePresence>
+                    {openDropdown === "mobile" && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="absolute top-20 left-0 w-full bg-navy-900 border-t border-white/5 md:hidden overflow-hidden"
+                        >
+                            <div className="container-pad py-8 flex flex-col gap-6">
+                                {site.nav.map((n) => (
+                                    <Link
+                                        key={n.label}
+                                        href={n.href}
+                                        onClick={() => setOpenDropdown(null)}
+                                        className="text-xl font-bold text-white hover:text-openbi-green transition-colors"
+                                    >
+                                        {n.label}
+                                    </Link>
+                                ))}
+                                <Link
+                                    href="/contact"
+                                    onClick={() => setOpenDropdown(null)}
+                                    className="btn-green text-center py-4"
+                                >
+                                    Contact Us
+                                </Link>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </header>
     );

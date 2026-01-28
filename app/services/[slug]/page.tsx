@@ -15,8 +15,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     return (
         <div className="pt-20">
             {/* Hero Section */}
-            <header className="hero-gradient py-24 text-white text-center">
-                <div className="container-pad">
+            <header
+                className={`text-white text-center relative overflow-hidden ${!data.backgroundImg ? 'hero-gradient py-24' : 'py-40 md:py-56 bg-navy-950'}`}
+            >
+                {data.backgroundImg && (
+                    <>
+                        <img
+                            src={data.backgroundImg}
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover object-[center_20%] z-0"
+                        />
+                        <div className="absolute inset-0 bg-navy-900/70 z-0" />
+                    </>
+                )}
+                <div className="container-pad relative z-10">
                     <div className="mb-4 text-xs font-black text-openbi-green uppercase tracking-[0.3em] flex items-center justify-center gap-2">
                         <Link href="/" className="hover:text-white transition-colors">HOME</Link>
                         <span>/</span>

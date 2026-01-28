@@ -15,7 +15,7 @@ export default function SolutionsPage() {
                     </div>
                     <h1 className="text-4xl md:text-5xl font-black mb-6 uppercase">Solution Accelerators</h1>
                     <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Pre-built frameworks we customize to your specific industry and data requirements.
+                        High-revenue, industry-proven frameworks tailored for the Indian market—from statutory compliance to operational excellence.
                     </p>
                 </div>
             </header>

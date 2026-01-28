@@ -24,7 +24,7 @@ export default function AboutPage() {
                         <div>
                             <h3 className="text-xl font-bold mb-3">Redefining the Industry Standard</h3>
                             <p className="text-ink-500 leading-relaxed">
-                                While the industry standard for complex Business Intelligence implementation typically takes weeks or even months, we have mastered the art of speed and precision. By combining our deep technical expertise with our proprietary automation framework, we have successfully deployed over 150+ Live Projects.
+                                While the industry standard for complex Business Intelligence implementation typically takes weeks or even months, we have mastered the art of speed and precision. Through our **Solution Accelerators**—pre-built frameworks for Indian statutory audit, manufacturing efficiency, and complex TDS/GST reconciliation—we successfully deploy complex projects in record time.
                             </p>
                         </div>
                         <div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-3">
+                <div className="grid gap-8 md:grid-cols-3 mb-24">
                     {[
                         { t: "The 10-Minute Benchmark", d: "We have perfected our automation framework to the point where we can deliver actionable BI reports within 10 minutes of system integration.", i: <LucideZap className="text-openbi-green" /> },
                         { t: "Live Ecosystem Connectivity", d: "We don't believe in static data. Our core capability lies in Live System Integration, ensuring your dashboards reflect what is happening in your business right now, not yesterday.", i: <LucideRotateCcw className="text-openbi-green" /> },
@@ -56,6 +56,65 @@ export default function AboutPage() {
                             <div className="text-sm text-ink-500 leading-relaxed">{item.d}</div>
                         </div>
                     ))}
+                </div>
+
+                {/* Leadership Section */}
+                <div className="max-w-4xl mx-auto mb-20">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-navy-900 mb-4">Our Leadership</h2>
+                        <p className="text-ink-500">The visionaries behind Zero-Lag Intelligence</p>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-12">
+                        <div className="text-center group">
+                            <div className="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-openbi-green transition-all">
+                                <img src="/assets/test-image.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            </div>
+                            <h3 className="text-xl font-bold text-navy-900">Mr. Prashant Dayama</h3>
+                            <p className="text-openbi-green font-bold text-sm uppercase tracking-wider mb-4">Co-Founder</p>
+                            <p className="text-ink-500 text-sm leading-relaxed">
+                                Driving the strategic vision for KCONexus, Prashant bridges the gap between financial compliance and technical innovation.
+                            </p>
+                        </div>
+                        <div className="text-center group">
+                            <div className="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-openbi-green transition-all">
+                                <img src="/assets/test-image.png" alt="Mr. Surendra" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            </div>
+                            <h3 className="text-xl font-bold text-navy-900">Mr. Surendra</h3>
+                            <h4 className="text-sm font-bold text-navy-400 mb-2">ACA, CS, B.Com</h4>
+                            <p className="text-openbi-green font-bold text-sm uppercase tracking-wider mb-4">Co-Founder</p>
+                            <p className="text-ink-500 text-sm leading-relaxed">
+                                Leading the technical architecture, Surendra ensures that every dashboard meets the highest standards of data integrity and audit rigor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Team & Certifications */}
+                <div className="bg-navy-900 rounded-3xl p-10 text-white flex flex-wrap items-center justify-between gap-8 shadow-2xl">
+                    <div className="flex-1 min-w-[300px]">
+                        <h3 className="text-2xl font-bold mb-4">A Team of 36 Dedicated Experts</h3>
+                        <p className="text-white/70 text-sm">
+                            Powered by 8 senior specialists and 28 Power BI engineers delivering complex intelligence solutions across 15+ industries.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-8 items-center">
+                        <div className="text-center">
+                            <div className="text-3xl font-black text-openbi-green mb-1">150+</div>
+                            <div className="text-[10px] uppercase font-bold text-white/40 tracking-widest">Projects Live</div>
+                        </div>
+                        <div className="text-center">
+                            <div className="text-3xl font-black text-openbi-green mb-1">50Y</div>
+                            <div className="text-[10px] uppercase font-bold text-white/40 tracking-widest">Financial Legacy</div>
+                        </div>
+                        <div className="flex gap-4 border-l border-white/10 pl-8">
+                            <div className="w-12 h-12 bg-white/5 rounded flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+                                <span className="text-[10px] font-bold">DA-100</span>
+                            </div>
+                            <div className="w-12 h-12 bg-white/5 rounded flex items-center justify-center grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+                                <span className="text-[10px] font-bold">AZ-900</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Section>
 

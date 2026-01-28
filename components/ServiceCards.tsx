@@ -3,22 +3,22 @@ import Link from "next/link";
 
 const services = [
     {
-        title: "Data Integration",
-        slug: "data-integration",
-        desc: "Connect your heterogeneous data sources (ERP, CRM, Excel, SQL, Snowflake) into a unified, clean, and reliable data warehouse or lake.",
-        icon: <LucideDatabase className="text-openbi-green" size={40} />,
+        title: "Process Automation",
+        slug: "automation",
+        desc: "Give your team 20 hours back every week by automating repetitive tasks. From data entry to report generation, we eliminate the robot work.",
+        icon: <LucideZap className="text-openbi-green" size={40} />,
     },
     {
-        title: "Analytics & Dashboards",
-        slug: "analytics-dashboards",
-        desc: "Transform raw data into beautiful, interactive Power BI dashboards that provide actionable insights for your leadership and operations teams.",
+        title: "Power BI & MIS",
+        slug: "power-bi-mis",
+        desc: "Replace spreadsheet chaos with executive dashboards that drive decisions. Get real-time visibility into what matters most to your business.",
         icon: <LucideBarChart4 className="text-openbi-green" size={40} />,
     },
     {
-        title: "Process Automation",
-        slug: "process-automation",
-        desc: "Eliminate manual reporting tasks through scheduled data refreshes, automated alerts, and streamlined ETL workflows for peak efficiency.",
-        icon: <LucideZap className="text-openbi-green" size={40} />,
+        title: "Systems Integration",
+        slug: "data-integration",
+        desc: "Stop losing hours to manual data transfers. We connect your systems automatically—ERP, CRM, Excel, SQL—into one unified source of truth.",
+        icon: <LucideDatabase className="text-openbi-green" size={40} />,
     },
 ];
 

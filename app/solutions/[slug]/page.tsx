@@ -22,15 +22,17 @@ export default async function SolutionPage({ params }: { params: Promise<{ slug:
         <div className="pt-20">
             {/* Hero Section */}
             <header
-                className={`py-24 text-white text-center relative overflow-hidden ${!data.backgroundImg ? 'hero-gradient' : ''}`}
-                style={data.backgroundImg ? {
-                    backgroundImage: `url('${data.backgroundImg}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                } : {}}
+                className={`py-24 text-white text-center relative overflow-hidden ${!data.backgroundImg ? 'hero-gradient' : 'bg-navy-950'}`}
             >
                 {data.backgroundImg && (
-                    <div className="absolute inset-0 bg-navy-900/80 z-0" />
+                    <>
+                        <img
+                            src={data.backgroundImg}
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover z-0"
+                        />
+                        <div className="absolute inset-0 bg-navy-900/80 z-0" />
+                    </>
                 )}
 
                 <div className="container-pad relative z-10">

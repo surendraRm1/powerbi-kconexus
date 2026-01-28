@@ -6,7 +6,15 @@ import ClientsStrip from "@/components/ClientsStrip";
 import ResourcesTabs from "@/components/ResourcesTabs";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import ThreePillars from "@/components/ThreePillars";
+import IndustryLogos from "@/components/IndustryLogos";
+import TechStack from "@/components/TechStack";
+import KumbhatCredibility from "@/components/KumbhatCredibility";
+import ComparisonTable from "@/components/ComparisonTable";
+import LeadMagnet from "@/components/LeadMagnet";
 import Link from "next/link";
+import DemoVideo from "@/components/DemoVideo";
+import ROICalculator from "@/components/ROICalculator";
 import { LucideCpu, LucideLayers, LucideMapPin, LucideMail } from "lucide-react";
 import { site } from "@/lib/site";
 
@@ -14,6 +22,34 @@ export default function HomePage() {
     return (
         <>
             <Hero />
+
+            {/* Three Pillars Section */}
+            <Section
+                eyebrow="How We Solve"
+                title="Three Core Solutions"
+                subtitle="Clear entry points for CFOs and COOs to transform their operations"
+                className="bg-surface-50"
+                center
+            >
+                <ThreePillars />
+            </Section>
+
+            {/* Demo Video Section */}
+            <Section
+                eyebrow="Quick Walkthrough"
+                title="See It In Action"
+                subtitle="Watch how our systems transform raw data into decision-ready insights in under 45 seconds."
+                center
+                className="pb-16"
+            >
+                <DemoVideo />
+            </Section>
+
+            {/* Industry Logos */}
+            <Section className="py-16">
+                <IndustryLogos />
+            </Section>
+
 
 
             {/* Digital Transformation Section */}
@@ -68,12 +104,23 @@ export default function HomePage() {
             <Section
                 id="services"
                 eyebrow="Expertise"
-                title="What we do"
-                subtitle="End-to-end business intelligence services designed for clarity and speed."
+                title="How We Help You Win"
+                subtitle="Outcome-driven solutions designed to save time, reduce errors, and accelerate growth."
                 className="bg-surface-50"
                 center
             >
                 <ServiceCards />
+            </Section>
+
+            {/* ROI Calculator Section */}
+            <Section
+                eyebrow="Financial Impact"
+                title="Calculate Your ROI"
+                subtitle="Discover how much your business can save by eliminating manual 'Robot Work'."
+                center
+                className="bg-surface-50"
+            >
+                <ROICalculator />
             </Section>
 
             {/* Solutions */}
@@ -81,7 +128,7 @@ export default function HomePage() {
                 id="solutions"
                 eyebrow="Solutions"
                 title="Solution Accelerators"
-                subtitle="Pre-built frameworks we customize to your specific industry and data requirements."
+                subtitle="High-revenue frameworks engineered for Indian statutory compliance, audit rigor, and operational excellence."
             >
                 <SolutionsGrid />
             </Section>
@@ -113,6 +160,21 @@ export default function HomePage() {
                 </div>
             </Section>
 
+            {/* Tech Stack Section */}
+            <Section className="bg-surface-50">
+                <TechStack />
+            </Section>
+
+            {/* Kumbhat Credibility Section */}
+            <Section className="py-24">
+                <KumbhatCredibility />
+            </Section>
+
+            {/* Comparison Table */}
+            <Section className="bg-surface-50">
+                <ComparisonTable />
+            </Section>
+
             {/* Testimonials */}
             <Section
                 eyebrow="Testimonials"
@@ -121,6 +183,16 @@ export default function HomePage() {
                 center
             >
                 <Testimonials />
+            </Section>
+
+            {/* Lead Magnet */}
+            <Section
+                eyebrow="Free Resource"
+                title="Is Your Business Ready for Automation?"
+                subtitle="Download our free 2026 MIS Checklist to find out"
+                center
+            >
+                <LeadMagnet />
             </Section>
 
             {/* Final CTA / Contact */}

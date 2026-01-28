@@ -17,13 +17,14 @@ export default function Hero() {
                             If Groceries just take <span className="text-openbi-green">10 mins</span> to deliver, <br className="hidden md:block" />
                             Why not <span className="text-openbi-green">MIS reports?</span>
                         </h1>
-                        <p className="text-xl md:text-2xl leading-tight font-bold text-white/90 mb-8">
-                            Turn Data into Decisions.<br />
-                            Turn Decisions into Growth.
+                        <p className="text-xl md:text-2xl leading-tight font-bold text-white/90 mb-4">
+                            Automate Your Workflow. Scale Your Growth.
                         </p>
-                        <p className="text-lg text-white/80 mb-8 max-w-xl">
-                            Don’t just collect data—command it. KCONexus delivers cutting-edge analytics and expert
-                            solutions designed to scale your business and sharpen your competitive edge.
+                        <p className="text-lg text-white/80 mb-2 max-w-xl font-semibold">
+                            We build MIS and Automation systems that give you back 20 hours a week.
+                        </p>
+                        <p className="text-base text-white/70 mb-8 max-w-xl">
+                            From dashboards that drive decisions to automation that eliminates manual work.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <motion.div
@@ -35,7 +36,7 @@ export default function Hero() {
                                     href="/contact"
                                     className="btn-green text-lg px-8 py-3"
                                 >
-                                    Get Started Today
+                                    Book Automation Preparation
                                 </Link>
                             </motion.div>
                             <motion.div
@@ -44,10 +45,10 @@ export default function Hero() {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                             >
                                 <Link
-                                    href="/#solutions"
+                                    href="/#resources"
                                     className="bg-white/10 text-white px-8 py-3 rounded font-semibold hover:bg-white/20 transition-all border border-white/20"
                                 >
-                                    View Our Solutions
+                                    View Sample Dashboard
                                 </Link>
                             </motion.div>
                         </div>

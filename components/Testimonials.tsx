@@ -1,7 +1,7 @@
 export default function Testimonials() {
     const items = [
-        { quote: "KCONexus helped us simplify reporting and focus on decisions. Their expertise in DAX and Azure is unmatched.", author: "Head of Analytics, Global Logistics" },
-        { quote: "The dashboards are not just beautiful, they are fast and reliable. A complete transformation of our data culture.", author: "CFO, Manufacturing Enterprise" }
+        { quote: "The dashboards are not just beautiful, they are fast and reliable. A complete transformation of our data culture.", author: "CFO, Manufacturing Enterprise" },
+        { quote: "KCONexus helped us simplify reporting and focus on decisions. Their expertise in DAX and Azure is unmatched.", author: "Head of Analytics, Global Logistics" }
     ];
 
     return (
