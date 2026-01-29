@@ -13,228 +13,279 @@ import {
     LucideRefreshCw,
     LucideShieldCheck
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function NexusAIPage() {
+    const heroRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: heroRef,
+        offset: ["start start", "end start"]
+    });
+
+    const yLeft = useTransform(scrollYProgress, [0, 1], [0, -100]);
+    const yRight = useTransform(scrollYProgress, [0, 1], [0, 100]);
+    const yMain = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
     return (
-        <>
-            {/* Hero Section */}
-            <section className="relative hero-gradient overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
-                <div className="container-pad relative z-10">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <div className="inline-flex items-center gap-2 bg-openbi-green/10 border border-openbi-green/20 rounded-full px-6 py-2 mb-8">
+        <div className="overflow-x-hidden">
+            {/* Hero Section - Multi-layered Parallax */}
+            <section ref={heroRef} className="relative hero-gradient overflow-hidden pt-32 pb-24 md:pt-40 md:pb-48">
+                {/* Background Glows */}
+                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-openbi-green/10 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-navy-400/10 rounded-full blur-[120px] pointer-events-none" />
+
+                <div className="container-pad relative z-10 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <div className="inline-flex items-center gap-2 bg-openbi-green/10 border border-openbi-green/20 rounded-full px-6 py-2 mb-8">
+                            <motion.div
+                                animate={{ rotate: [0, 10, -10, 0] }}
+                                transition={{ repeat: Infinity, duration: 4 }}
+                            >
                                 <LucideBot className="text-openbi-green" size={20} />
-                                <span className="text-sm font-bold text-openbi-green uppercase tracking-wider">
-                                    Next-Gen AI Accounting
-                                </span>
-                            </div>
+                            </motion.div>
+                            <span className="text-sm font-bold text-openbi-green uppercase tracking-widest">
+                                The Future of Autonomous Accounting
+                            </span>
+                        </div>
 
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                                Meet <span className="text-openbi-green">Nexus AI:</span><br />
-                                Your 24/7 AI Accountant.
-                            </h1>
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight">
+                            Meet your new <br />
+                            <span className="text-openbi-green">AI Accountant</span>
+                        </h1>
 
-                            <p className="text-xl text-white/80 mb-6 leading-relaxed">
-                                From a pile of documents to sync-ready books in minutes. No manual data entry, no human bottleneck.
-                            </p>
+                        <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+                            The AI co-worker every Indian CA trusts to take care of 75% of their accounting tasks.
+                            From documents to sync-ready books in minutes.
+                        </p>
 
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/contact" className="btn-green text-lg px-8 py-3">
-                                    Schedule a Demo
-                                </Link>
-                                <Link href="#features" className="bg-white/10 text-white px-8 py-3 rounded font-semibold hover:bg-white/20 transition-all border border-white/20">
-                                    Explore Features
-                                </Link>
-                            </div>
-                        </motion.div>
+                        <div className="flex flex-wrap gap-6 justify-center mb-24">
+                            <Link href="/contact" className="btn-green text-xl px-10 py-5 shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-openbi-green/50 transition-all duration-300">
+                                Talk To Us
+                            </Link>
+                            <Link href="#how-it-works" className="bg-white/5 text-white px-10 py-5 rounded font-bold hover:bg-white/10 transition-all border border-white/10 backdrop-blur-md">
+                                How it Works
+                            </Link>
+                        </div>
+                    </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
-                        >
-                            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-                                <img
-                                    src="/assets/nexus-hero.png"
-                                    alt="Nexus AI Hero"
-                                    className="w-full h-auto"
-                                />
-                            </div>
-                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-openbi-green/20 rounded-full blur-[80px]" />
-                            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-navy-400/20 rounded-full blur-[80px]" />
-                        </motion.div>
+                    {/* Interactive Hero Assets */}
+                    <div className="relative mt-12 max-w-5xl mx-auto">
+                        <div className="relative aspect-[16/9] w-full">
+                            <motion.img
+                                style={{ y: yMain }}
+                                src="/assets/nexus-hero-main.svg"
+                                alt="AI Accountant Main Interface"
+                                className="absolute inset-0 w-full h-full object-contain z-10"
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1.2, delay: 0.4 }}
+                            />
+                            <motion.img
+                                style={{ y: yLeft }}
+                                src="/assets/nexus-hero-left.svg"
+                                alt="Sync Status"
+                                className="absolute -left-[10%] top-[20%] w-[30%] h-auto object-contain z-20 pointer-events-none drop-shadow-2xl"
+                                initial={{ opacity: 0, x: -50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, delay: 0.8 }}
+                            />
+                            <motion.img
+                                style={{ y: yRight }}
+                                src="/assets/nexus-hero-right.svg"
+                                alt="Automated Bookkeeping"
+                                className="absolute -right-[15%] top-[10%] w-[40%] h-auto object-contain z-0 pointer-events-none drop-shadow-2xl"
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1, delay: 1 }}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Core Features */}
-            <Section
-                id="features"
-                eyebrow="Capabilities"
-                title="Accounting Reinvented"
-                subtitle="Nexus AI handles the heavy lifting of bookkeeping so you can focus on strategic growth."
-                center
-            >
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Value Props Section */}
+            <Section className="bg-white py-32" id="solutions">
+                <div className="grid md:grid-cols-3 gap-12">
                     {[
                         {
-                            title: "Bookkeeping Automation",
-                            desc: "AI reads every line, categorizes transactions, and maps them to your chart of accounts.",
-                            icon: <LucideDatabase className="text-white" size={28} />,
-                            color: "from-blue-500 to-blue-600"
+                            title: "Human-Speed Accuracy",
+                            desc: "Upload any bank or card statement. AI reads every transaction and maps them to the right ledgers automatically.",
+                            icon: <LucideZap className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-connect-demo.avif"
                         },
                         {
-                            title: "Intelligent OCR",
-                            desc: "Understands handwritten bills and complex document layouts with over 99% accuracy.",
-                            icon: <LucideScanLine className="text-white" size={28} />,
-                            color: "from-openbi-green to-green-600"
+                            title: "Smart Document Matching",
+                            desc: "AI pulls your bills directly, reads the details, and matches each bill to the right transaction. No digging, no errors.",
+                            icon: <LucideScanLine className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-ocr-demo.avif"
                         },
                         {
-                            title: "GST Reconciliation",
-                            desc: "Auto-match purchase registers with GSTR-2B to maximize your Input Tax Credit.",
-                            icon: <LucideShieldCheck className="text-white" size={28} />,
-                            color: "from-purple-500 to-purple-600"
-                        },
-                        {
-                            title: "Live Reporting",
-                            desc: "Real-time financial dashboards built directly from your Tally or Zoho data.",
-                            icon: <LucideLayoutDashboard className="text-white" size={28} />,
-                            color: "from-orange-500 to-orange-600"
+                            title: "Works with Your Tools",
+                            desc: "Keep using Zoho or Tally. Nexus AI works on your specific accounting setup, just like an in-house expert.",
+                            icon: <LucideRefreshCw className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-sync-demo.avif"
                         }
-                    ].map((feature, idx) => (
+                    ].map((item, idx) => (
                         <motion.div
-                            key={feature.title}
-                            initial={{ opacity: 0, y: 20 }}
+                            key={item.title}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="card-openbi group hover:-translate-y-2 transition-transform duration-300"
+                            transition={{ delay: idx * 0.2 }}
+                            className="flex flex-col h-full"
                         >
-                            <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
-                                {feature.icon}
+                            <div className="rounded-3xl overflow-hidden mb-8 shadow-xl border border-gray-100 flex-1">
+                                <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                            <p className="text-sm text-ink-500 leading-relaxed">
-                                {feature.desc}
-                            </p>
+                            <div className="px-2">
+                                <div className="mb-4">{item.icon}</div>
+                                <h3 className="text-2xl font-bold text-navy-900 mb-4">{item.title}</h3>
+                                <p className="text-ink-500 leading-relaxed">{item.desc}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
             </Section>
 
-            {/* Smart OCR Section */}
-            <Section className="bg-surface-50">
-                <div className="grid md:grid-cols-2 gap-16 items-center">
-                    <div className="order-2 md:order-1">
-                        <div className="rounded-3xl border border-gray-100 overflow-hidden shadow-2xl relative bg-white">
-                            <img
-                                src="/assets/ocr-demo.png"
-                                alt="Intelligent OCR Demo"
-                                className="w-full h-auto"
-                            />
-                            <div className="absolute top-4 right-4 bg-openbi-green text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-                                live scan
-                            </div>
-                        </div>
+            {/* Core Capabilities - Staggered Grid */}
+            <section className="bg-surface-50 py-32">
+                <div className="container-pad">
+                    <div className="text-center mb-20 max-w-3xl mx-auto">
+                        <span className="text-openbi-green font-black uppercase tracking-[0.2em] text-xs mb-4 block">Product Suite</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">Accounting Done for You in Minutes</h2>
+                        <p className="text-lg text-ink-500">Simplify accounting, amplify growth with our intelligent automation engine.</p>
                     </div>
-                    <div className="order-1 md:order-2 space-y-6">
-                        <span className="text-openbi-green font-bold text-sm uppercase tracking-wider">OCR Excellence</span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-navy-900 leading-tight">
-                            Every Bill, Matched and Mapped Automatically.
-                        </h2>
-                        <p className="text-lg text-ink-500">
-                            Say goodbye to manual data entry. Upload hundreds of statements and bills in one go. Our AI reads the details, categorizes vendors, and syncs them to your accounting tool.
-                        </p>
-                        <ul className="space-y-4">
-                            {[
-                                "Processes handwritten and scanned bills",
-                                "99%+ data extraction accuracy",
-                                "Automatic vendor & GL mapping",
-                                "Instant duplicate detection"
-                            ].map((item) => (
-                                <li key={item} className="flex items-center gap-3 text-navy-900 font-semibold">
-                                    <LucideCheckCircle2 className="text-openbi-green" size={20} />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        {[
+                            {
+                                title: "Bookkeeping Automation",
+                                desc: "AI reads every line, categorizes transactions, and syncs them to Tally or Zoho instantly.",
+                                icon: <LucideDatabase size={24} />,
+                                color: "bg-blue-600"
+                            },
+                            {
+                                title: "Vendor Bill Matching",
+                                desc: "From a pile of documents to verified, sync-ready bills without any manual data entry.",
+                                icon: <LucideScanLine size={24} />,
+                                color: "bg-openbi-green"
+                            },
+                            {
+                                title: "GST Reconciliation",
+                                desc: "Match your Purchase Register with GSTR-2B automatically and claim the right ITC every month.",
+                                icon: <LucideShieldCheck size={24} />,
+                                color: "bg-purple-600"
+                            },
+                            {
+                                title: "MIS Reporting",
+                                desc: "Real-time financial dashboards built from your accounting data with zero manual prep.",
+                                icon: <LucideLayoutDashboard size={24} />,
+                                color: "bg-orange-600"
+                            }
+                        ].map((cap, i) => (
+                            <motion.div
+                                key={cap.title}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="group p-8 bg-white rounded-[2rem] border border-gray-100 hover:border-openbi-green/30 transition-all duration-300 shadow-sm hover:shadow-xl flex items-start gap-8"
+                            >
+                                <div className={`shrink-0 w-16 h-16 ${cap.color} text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-6 transition-transform`}>
+                                    {cap.icon}
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-3 text-navy-900">{cap.title}</h3>
+                                    <p className="text-ink-500 text-sm leading-relaxed">{cap.desc}</p>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
-            </Section>
+            </section>
 
-            {/* How it Works */}
-            <Section
-                eyebrow="The Workflow"
-                title="How Nexus AI Works"
-                subtitle="Four simple steps to transform your accounting process."
-                center
-            >
-                <div className="grid md:grid-cols-4 gap-8 relative">
-                    {/* Connection Line */}
-                    <div className="absolute top-1/4 left-0 w-full h-0.5 bg-navy-50 hidden md:block z-0" />
-
+            {/* How it Works Section */}
+            <Section id="how-it-works" title="How Nexus AI Works" eyebrow="The Process" center className="bg-white">
+                <div className="relative grid md:grid-cols-5 gap-4">
                     {[
-                        { step: "01", title: "Connect", desc: "Link Nexus AI to your Tally, Zoho, or ERP systems in minutes.", icon: <LucideRefreshCw /> },
-                        { step: "02", title: "Upload", desc: "Drop your invoices, bank statements, or receipts into the platform.", icon: <LucideZap /> },
-                        { step: "03", title: "AI Process", desc: "AI extracts data, maps ledgers, and identifies discrepancies.", icon: <LucideBot /> },
-                        { step: "04", title: "One-Click Sync", desc: "Verified data is synced back to your core accounting software.", icon: <LucideCheckCircle2 /> }
+                        { step: "01", title: "Connect", icon: <LucideRefreshCw /> },
+                        { step: "02", title: "Upload", icon: <LucideZap /> },
+                        { step: "03", title: "Analyze", icon: <LucideScanLine /> },
+                        { step: "04", title: "Auto-Map", icon: <LucideBot /> },
+                        { step: "05", title: "Sync", icon: <LucideCheckCircle2 /> }
                     ].map((s, idx) => (
-                        <div key={s.title} className="relative z-10 flex flex-col items-center">
-                            <div className="w-12 h-12 bg-navy-900 text-white rounded-full flex items-center justify-center font-black text-lg mb-6 shadow-lg border-4 border-white">
-                                {s.step}
+                        <motion.div
+                            key={s.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.15 }}
+                            className="relative flex flex-col items-center p-8 bg-surface-50 rounded-3xl"
+                        >
+                            <span className="absolute top-4 left-6 text-3xl font-black text-navy-900/5">{s.step}</span>
+                            <div className="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-openbi-green mb-6">
+                                {s.icon}
                             </div>
-                            <div className="text-center p-6 card-openbi w-full bg-white">
-                                <div className="text-openbi-green mb-4 flex justify-center">{s.icon}</div>
-                                <h4 className="text-lg font-bold mb-2">{s.title}</h4>
-                                <p className="text-xs text-ink-500 leading-relaxed">{s.desc}</p>
-                            </div>
-                        </div>
+                            <h4 className="font-bold text-navy-900">{s.title}</h4>
+                            {idx < 4 && (
+                                <div className="hidden md:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 text-gray-200">
+                                    <LucideArrowRight size={24} />
+                                </div>
+                            )}
+                        </motion.div>
                     ))}
                 </div>
             </Section>
 
-            {/* Comparison Table */}
-            <Section className="bg-navy-900 text-white py-24">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Nexus AI vs. Traditional Accounting</h2>
-                        <p className="text-white/70 text-lg text-ink-500">Experience the 10x improvement in efficiency.</p>
+            {/* Comparison Section - High Impact */}
+            <section className="bg-navy-900 py-32 rounded-[4rem] mx-4 my-8 overflow-hidden relative">
+                <div className="absolute inset-0 bg-[url('/assets/dots-map.png')] opacity-10 bg-center bg-cover pointer-events-none" />
+                <div className="container-pad relative z-10">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-6">Manual vs. <span className="text-openbi-green">Nexus AI</span></h2>
+                        <p className="text-white/60 text-lg max-w-2xl mx-auto">Experience a 10x shift in your accounting efficiency.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
-                            <h3 className="text-xl font-bold text-red-400 mb-8 flex items-center gap-2">
-                                <span className="w-8 h-8 rounded-full bg-red-400/20 flex items-center justify-center">✕</span>
+                    <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white/5 border border-white/10 p-10 rounded-[3rem] backdrop-blur-sm"
+                        >
+                            <h3 className="text-2xl font-bold text-red-400 mb-8 flex items-center gap-4">
+                                <span className="w-10 h-10 rounded-full bg-red-400/20 flex items-center justify-center">✕</span>
                                 Traditional Manual Process
                             </h3>
                             <ul className="space-y-6">
                                 {[
                                     "Manual entry of physical bills (Hours of work)",
-                                    "Periodic, delayed financial reports",
+                                    "Delayed financial visibility",
                                     "Prone to human error and duplicates",
-                                    "Manual GST matching & reconciliation",
-                                    "High operational cost per transaction"
+                                    "Manual GST matching & reconciliation"
                                 ].map((item) => (
-                                    <li key={item} className="flex gap-4 text-white/70 text-sm">
-                                        <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-red-400 mt-2" />
+                                    <li key={item} className="flex gap-4 text-white/50 text-sm">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
 
-                        <div className="bg-openbi-green/10 rounded-3xl p-8 border border-openbi-green/30 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-openbi-green text-navy-900 font-black px-6 py-2 rounded-bl-2xl text-xs uppercase tracking-tighter">
-                                Recommended
-                            </div>
-                            <h3 className="text-xl font-bold text-openbi-green mb-8 flex items-center gap-2">
-                                <span className="w-8 h-8 rounded-full bg-openbi-green/20 flex items-center justify-center">✓</span>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-openbi-green/10 border border-openbi-green/30 p-10 rounded-[3rem] shadow-[0_0_50px_rgba(34,197,94,0.1)]"
+                        >
+                            <h3 className="text-2xl font-bold text-openbi-green mb-8 flex items-center gap-4">
+                                <span className="w-10 h-10 rounded-full bg-openbi-green/20 flex items-center justify-center">✓</span>
                                 Powered by Nexus AI
                             </h3>
                             <ul className="space-y-6">
@@ -242,67 +293,70 @@ export default function NexusAIPage() {
                                     "Instant OCR data extraction (Seconds)",
                                     "Real-time live financial dashboards",
                                     "AI-powered error & anomaly detection",
-                                    "Automated 2A/2B matching & filings",
-                                    "90% reduction in processing costs"
+                                    "Automated 2A/2B matching & filings"
                                 ].map((item) => (
-                                    <li key={item} className="flex gap-4 text-white font-semibold text-sm">
-                                        <LucideCheckCircle2 className="text-openbi-green shrink-0" size={18} />
+                                    <li key={item} className="flex gap-4 text-white font-semibold">
+                                        <LucideCheckCircle2 className="text-openbi-green shrink-0" size={20} />
                                         {item}
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            </Section>
+            </section>
 
-            {/* Dashboard Visualization */}
-            <Section center>
-                <div className="max-w-5xl mx-auto">
-                    <span className="text-openbi-green font-bold text-sm uppercase tracking-wider mb-4 block">Total Visibility</span>
-                    <h2 className="section-title mb-8">Data-Driven Decisions, In Real-Time.</h2>
-                    <div className="rounded-3xl border border-gray-100 overflow-hidden shadow-2xl group relative bg-white">
-                        <img
-                            src="/assets/live-sync.png"
-                            alt="Nexus AI Dashboard"
-                            className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+            {/* Live Dashboard Section with CSS Scan effect */}
+            <Section center className="py-40">
+                <div className="max-w-5xl mx-auto relative group">
+                    <span className="text-openbi-green font-black uppercase tracking-[0.3em] text-xs mb-4 block">Real-time Visualization</span>
+                    <h2 className="text-4xl md:text-6xl font-black text-navy-900 mb-12">One Dashboard to Rule Them All</h2>
+
+                    <div className="relative rounded-[3rem] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.15)] border border-gray-100">
+                        <img src="/assets/live-sync.png" alt="AIA Dashboard" className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-1000" />
+
+                        {/* Animated Scan Line */}
+                        <motion.div
+                            className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-openbi-green to-transparent z-20 shadow-[0_0_15px_rgba(34,197,94,0.8)]"
+                            animate={{ top: ["0%", "100%", "0%"] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                         />
-                        <div className="absolute inset-0 bg-navy-900/5 group-hover:opacity-0 transition-opacity" />
+
+                        {/* Overlay Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/20 to-transparent pointer-events-none" />
                     </div>
-                    <div className="mt-12 grid md:grid-cols-3 gap-8">
-                        <div className="p-6">
-                            <div className="text-3xl font-bold text-navy-900 mb-2">10 mins</div>
-                            <p className="text-sm text-ink-500">Average time to process 100+ invoices</p>
-                        </div>
-                        <div className="p-6">
-                            <div className="text-3xl font-bold text-navy-900 mb-2">0 Manual Job</div>
-                            <p className="text-sm text-ink-500">From document to sync-ready record</p>
-                        </div>
-                        <div className="p-6">
-                            <div className="text-3xl font-bold text-navy-900 mb-2">100% Secure</div>
-                            <p className="text-sm text-ink-500">SOC 2 compliant & bank-grade encryption</p>
-                        </div>
+
+                    <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        {[
+                            { label: "Sync Speed", val: "100ms" },
+                            { label: "Accuracy", val: "99.9%" },
+                            { label: "Efficiency", val: "10x" },
+                            { label: "Security", val: "Bank-Grade" }
+                        ].map(stat => (
+                            <div key={stat.label} className="text-center">
+                                <div className="text-3xl font-black text-navy-900 mb-2">{stat.val}</div>
+                                <div className="text-xs uppercase font-bold text-ink-400 tracking-widest">{stat.label}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </Section>
 
             {/* Final CTA */}
-            <Section className="bg-surface-50">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8">
-                        Ready to meet your new AI Accountant?
+            <section className="bg-openbi-green py-32">
+                <div className="container-pad text-center">
+                    <h2 className="text-4xl md:text-6xl font-black text-navy-900 mb-8 max-w-4xl mx-auto">
+                        Ready to let AI handle your accounting?
                     </h2>
-                    <p className="text-xl text-ink-500 mb-12 max-w-2xl mx-auto">
-                        Stop doing "Robot Work" and start making strategic decisions. Join the future of autonomous accounting with KCONexus.
+                    <p className="text-xl text-navy-900/70 mb-12 max-w-2xl mx-auto font-medium">
+                        Join 500+ businesses automating their financial workflows.
+                        Start your journey to zero-lag intelligence today.
                     </p>
-                    <div className="flex flex-wrap gap-6 justify-center">
-                        <Link href="/contact" className="btn-green text-lg px-10 py-4 inline-flex items-center gap-2">
-                            Book a Free Demo
-                            <LucideArrowRight size={20} />
-                        </Link>
-                    </div>
+                    <Link href="/contact" className="bg-navy-900 text-white text-xl font-bold px-12 py-6 rounded-2xl hover:bg-navy-800 transition-all shadow-2xl inline-flex items-center gap-3">
+                        Book a Free Demo <LucideArrowRight />
+                    </Link>
                 </div>
-            </Section>
-        </>
+            </section>
+        </div>
     );
 }
