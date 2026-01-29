@@ -70,8 +70,8 @@ export default function NexusAIPage() {
                             className="relative z-10 w-full overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(56,189,248,0.15)] border border-white/10"
                         >
                             <img
-                                src="/assets/nexus-hero-v2.png"
-                                alt="Nexus AI Dashboard"
+                                src="/assets/nexus-ai-phone.jpg"
+                                alt="Nexus AI Mobile Interface"
                                 className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
                             />
                             {/* Overlay Gradient for depth */}
@@ -102,7 +102,7 @@ export default function NexusAIPage() {
                         },
                         {
                             title: "Works with Your Tools",
-                            desc: "Keep using Zoho or Tally. Nexus AI works on your specific accounting setup, just like an in-house expert.",
+                            desc: "Keep using Tally, Zoho, or SAP. Nexus AI works on your specific accounting setup, just like an in-house expert.",
                             icon: <LucideRefreshCw className="text-openbi-green" size={32} />,
                             img: "/assets/nexus-sync-demo.avif"
                         }
@@ -141,7 +141,7 @@ export default function NexusAIPage() {
                         {[
                             {
                                 title: "Bookkeeping Automation",
-                                desc: "AI reads every line, categorizes transactions, and syncs them to Tally or Zoho instantly.",
+                                desc: "AI reads every line, categorizes transactions, and syncs them to Tally, Zoho, or SAP instantly.",
                                 icon: <LucideDatabase size={24} />,
                                 color: "bg-blue-600"
                             },
