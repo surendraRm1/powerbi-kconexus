@@ -2,6 +2,51 @@
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+
+const Typewriter = ({ words }: { words: string[] }) => {
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [reverse, setReverse] = useState(false);
+    const [blink, setBlink] = useState(true);
+
+    // Blinking cursor
+    useEffect(() => {
+        const timeout2 = setTimeout(() => {
+            setBlink((prev) => !prev);
+        }, 500);
+        return () => clearTimeout(timeout2);
+    }, [blink]);
+
+    // Typing logic
+    useEffect(() => {
+        if (subIndex === words[index].length + 1 && !reverse) {
+            const timeout = setTimeout(() => {
+                setReverse(true);
+            }, 1500); // Wait before deleting
+            return () => clearTimeout(timeout);
+        }
+
+        if (subIndex === 0 && reverse) {
+            setReverse(false);
+            setIndex((prev) => (prev + 1) % words.length);
+            return;
+        }
+
+        const timeout = setTimeout(() => {
+            setSubIndex((prev) => prev + (reverse ? -1 : 1));
+        }, reverse ? 75 : 150);
+
+        return () => clearTimeout(timeout);
+    }, [subIndex, index, reverse, words]);
+
+    return (
+        <span className="text-openbi-green inline-block">
+            {words[index].substring(0, subIndex)}
+            <span className={`${blink ? "opacity-100" : "opacity-0"} ml-1`}>|</span>
+        </span>
+    );
+};
 
 export default function Hero() {
     return (
@@ -15,7 +60,7 @@ export default function Hero() {
                     >
                         <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
                             If Groceries just take <span className="text-openbi-green">10 mins</span> to deliver, <br className="hidden md:block" />
-                            Why not <span className="text-openbi-green">MIS reports?</span>
+                            Why not <Typewriter words={["MIS reports?", "GST Reconciliation?", "Cash Flow?", "Vendor Payments?"]} />
                         </h1>
                         <p className="text-xl md:text-2xl leading-tight font-bold text-white/90 mb-4">
                             Automate Your Workflow. Scale Your Growth.
