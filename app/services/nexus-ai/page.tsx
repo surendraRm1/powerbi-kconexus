@@ -75,13 +75,13 @@ export default function NexusAIPage() {
                     </motion.div>
 
                     {/* Interactive Hero Assets */}
-                    <div className="relative mt-12 max-w-5xl mx-auto">
-                        <div className="relative aspect-[16/9] w-full">
+                    <div className="relative mt-20 max-w-5xl mx-auto px-4">
+                        <div className="relative w-full max-w-4xl mx-auto min-h-[300px] md:min-h-[500px]">
                             <motion.img
                                 style={{ y: yMain }}
                                 src="/assets/nexus-hero-main.svg"
                                 alt="AI Accountant Main Interface"
-                                className="absolute inset-0 w-full h-full object-contain z-10"
+                                className="relative z-10 w-full h-auto drop-shadow-2xl mx-auto"
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1.2, delay: 0.4 }}
@@ -90,8 +90,8 @@ export default function NexusAIPage() {
                                 style={{ y: yLeft }}
                                 src="/assets/nexus-hero-left.svg"
                                 alt="Sync Status"
-                                className="absolute -left-[10%] top-[20%] w-[30%] h-auto object-contain z-20 pointer-events-none drop-shadow-2xl"
-                                initial={{ opacity: 0, x: -50 }}
+                                className="absolute -left-[5%] md:-left-[12%] top-[15%] w-[25%] md:w-[32%] h-auto object-contain z-20 pointer-events-none drop-shadow-2xl"
+                                initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.8 }}
                             />
@@ -99,8 +99,8 @@ export default function NexusAIPage() {
                                 style={{ y: yRight }}
                                 src="/assets/nexus-hero-right.svg"
                                 alt="Automated Bookkeeping"
-                                className="absolute -right-[15%] top-[10%] w-[40%] h-auto object-contain z-0 pointer-events-none drop-shadow-2xl"
-                                initial={{ opacity: 0, x: 50 }}
+                                className="absolute -right-[8%] md:-right-[18%] top-[5%] w-[35%] md:w-[45%] h-auto object-contain z-0 pointer-events-none drop-shadow-2xl"
+                                initial={{ opacity: 0, x: 30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 1 }}
                             />
@@ -138,10 +138,10 @@ export default function NexusAIPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.2 }}
-                            className="flex flex-col h-full"
+                            className="flex flex-col h-full group"
                         >
-                            <div className="rounded-3xl overflow-hidden mb-8 shadow-xl border border-gray-100 flex-1">
-                                <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                            <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-xl border border-gray-100 bg-gray-50">
+                                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="px-2">
                                 <div className="mb-4">{item.icon}</div>
