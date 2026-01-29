@@ -128,6 +128,39 @@ export default function NexusAIPage() {
                 </div>
             </Section>
 
+            {/* How it Works Section */}
+            <Section id="how-it-works" title="How Nexus AI Works" eyebrow="The Process" center className="bg-white">
+                <div className="relative grid md:grid-cols-5 gap-4">
+                    {[
+                        { step: "01", title: "Connect", icon: <LucideRefreshCw /> },
+                        { step: "02", title: "Upload", icon: <LucideZap /> },
+                        { step: "03", title: "Analyze", icon: <LucideScanLine /> },
+                        { step: "04", title: "Auto-Map", icon: <LucideBot /> },
+                        { step: "05", title: "Sync", icon: <LucideCheckCircle2 /> }
+                    ].map((s, idx) => (
+                        <motion.div
+                            key={s.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.15 }}
+                            className="relative flex flex-col items-center p-8 bg-surface-50 rounded-3xl"
+                        >
+                            <span className="absolute top-4 left-6 text-3xl font-black text-navy-900/5">{s.step}</span>
+                            <div className="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-openbi-green mb-6">
+                                {s.icon}
+                            </div>
+                            <h4 className="font-bold text-navy-900">{s.title}</h4>
+                            {idx < 4 && (
+                                <div className="hidden md:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 text-gray-200">
+                                    <LucideArrowRight size={24} />
+                                </div>
+                            )}
+                        </motion.div>
+                    ))}
+                </div>
+            </Section>
+
             {/* Core Capabilities - Staggered Grid */}
             <section className="bg-surface-50 py-32">
                 <div className="container-pad">
@@ -184,39 +217,6 @@ export default function NexusAIPage() {
                     </div>
                 </div>
             </section>
-
-            {/* How it Works Section */}
-            <Section id="how-it-works" title="How Nexus AI Works" eyebrow="The Process" center className="bg-white">
-                <div className="relative grid md:grid-cols-5 gap-4">
-                    {[
-                        { step: "01", title: "Connect", icon: <LucideRefreshCw /> },
-                        { step: "02", title: "Upload", icon: <LucideZap /> },
-                        { step: "03", title: "Analyze", icon: <LucideScanLine /> },
-                        { step: "04", title: "Auto-Map", icon: <LucideBot /> },
-                        { step: "05", title: "Sync", icon: <LucideCheckCircle2 /> }
-                    ].map((s, idx) => (
-                        <motion.div
-                            key={s.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.15 }}
-                            className="relative flex flex-col items-center p-8 bg-surface-50 rounded-3xl"
-                        >
-                            <span className="absolute top-4 left-6 text-3xl font-black text-navy-900/5">{s.step}</span>
-                            <div className="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center text-openbi-green mb-6">
-                                {s.icon}
-                            </div>
-                            <h4 className="font-bold text-navy-900">{s.title}</h4>
-                            {idx < 4 && (
-                                <div className="hidden md:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 text-gray-200">
-                                    <LucideArrowRight size={24} />
-                                </div>
-                            )}
-                        </motion.div>
-                    ))}
-                </div>
-            </Section>
 
             {/* Comparison Section - High Impact */}
             <section className="bg-navy-900 py-32 rounded-[4rem] mx-4 my-8 overflow-hidden relative">
