@@ -64,10 +64,7 @@ export default function NexusAIPage() {
                             From documents to sync-ready books in minutes.
                         </p>
 
-                        <div className="flex flex-wrap gap-6 justify-center mb-24">
-                            <Link href="/contact" className="btn-green text-xl px-10 py-5 shadow-[0_0_30px_rgba(56,189,248,0.3)] hover:shadow-openbi-green/50 transition-all duration-300">
-                                Talk To Us
-                            </Link>
+                        <div className="flex flex-wrap gap-6 justify-center mb-12">
                             <Link href="#how-it-works" className="bg-white/5 text-white px-10 py-5 rounded font-bold hover:bg-white/10 transition-all border border-white/10 backdrop-blur-md">
                                 How it Works
                             </Link>
@@ -75,7 +72,7 @@ export default function NexusAIPage() {
                     </motion.div>
 
                     {/* Interactive Hero Assets */}
-                    <div className="relative mt-20 max-w-5xl mx-auto px-4">
+                    <div className="relative mt-12 max-w-5xl mx-auto px-4">
                         <div className="relative w-full max-w-4xl mx-auto min-h-[300px] md:min-h-[500px]">
                             <motion.img
                                 style={{ y: yMain }}
