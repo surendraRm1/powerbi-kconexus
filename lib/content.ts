@@ -24,6 +24,12 @@ export const servicesData: Record<string, any> = {
         img: "/assets/sample-supply.png",
         backgroundImg: "/assets/automation-bg.jpg",
         benefits: ["Scheduled Refreshes", "Custom ETL Logic", "Automated Alerts", "Reduced Manual Error"]
+    },
+    "nexus-ai": {
+        title: "Nexus AI",
+        desc: "Next-generation AI accounting that automates bookkeeping, OCR bill extraction, and real-time financial reporting.",
+        img: "/assets/nexus-hero.png",
+        benefits: ["99% OCR Accuracy", "Automated Ledger Mapping", "Real-time GST Reconciliation", "Bank-Grade Security"]
     }
 };
 
@@ -130,5 +136,6 @@ export const allSolutions = [
 export const allServices = [
     "Data Integration",
     "Analytics & Dashboards",
-    "Process Automation"
+    "Process Automation",
+    "Nexus AI"
 ];

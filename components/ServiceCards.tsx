@@ -1,7 +1,13 @@
-import { LucideDatabase, LucideBarChart4, LucideZap } from "lucide-react";
+import { LucideDatabase, LucideBarChart4, LucideZap, LucideBot } from "lucide-react";
 import Link from "next/link";
 
 const services = [
+    {
+        title: "Nexus AI",
+        slug: "nexus-ai",
+        desc: "Meet your 24/7 AI Accountant. Automate bookkeeping, tax reconciliation, and financial reporting with next-gen AI precision.",
+        icon: <LucideBot className="text-openbi-green" size={40} />,
+    },
     {
         title: "Process Automation",
         slug: "automation",

@@ -42,25 +42,6 @@ export default function AutomationPage() {
                 </div>
             </section>
 
-            {/* Automation Philosophy Cards */}
-            <Section className="pt-24 pb-12">
-                <div className="grid gap-8 md:grid-cols-3">
-                    {[
-                        { t: "The 10-Minute Benchmark", d: "We have perfected our automation framework to the point where we can deliver actionable BI reports within 10 minutes of system integration.", i: <LucideZap className="text-openbi-green" /> },
-                        { t: "Live Ecosystem Connectivity", d: "We don't believe in static data. Our core capability lies in Live System Integration, ensuring your dashboards reflect what is happening in your business right now, not yesterday.", i: <LucideRefreshCw className="text-openbi-green" /> },
-                        { t: "Automation-First Philosophy", d: "We specialize in the end-to-end automation of data pipelines. From connecting to your ERP to cleaning and visualizing data, we remove the human bottleneck entirely.", i: <LucideNetwork className="text-openbi-green" /> },
-                    ].map((item) => (
-                        <div key={item.t} className="card-openbi group">
-                            <div className="mb-4 p-3 bg-gray-50 rounded-lg inline-block group-hover:bg-openbi-green/10 transition-colors">
-                                {item.i}
-                            </div>
-                            <div className="text-lg font-bold mb-3">{item.t}</div>
-                            <div className="text-sm text-ink-500 leading-relaxed">{item.d}</div>
-                        </div>
-                    ))}
-                </div>
-            </Section>
-
             {/* Key Services */}
             <Section
                 eyebrow="Our Services"
@@ -140,6 +121,25 @@ export default function AutomationPage() {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </Section>
+
+            {/* Automation Philosophy Cards */}
+            <Section className="pt-24 pb-12">
+                <div className="grid gap-8 md:grid-cols-3">
+                    {[
+                        { t: "The 10-Minute Benchmark", d: "We have perfected our automation framework to the point where we can deliver actionable BI reports within 10 minutes of system integration.", i: <LucideZap className="text-openbi-green" /> },
+                        { t: "Live Ecosystem Connectivity", d: "We don't believe in static data. Our core capability lies in Live System Integration, ensuring your dashboards reflect what is happening in your business right now, not yesterday.", i: <LucideRefreshCw className="text-openbi-green" /> },
+                        { t: "Automation-First Philosophy", d: "We specialize in the end-to-end automation of data pipelines. From connecting to your ERP to cleaning and visualizing data, we remove the human bottleneck entirely.", i: <LucideNetwork className="text-openbi-green" /> },
+                    ].map((item) => (
+                        <div key={item.t} className="card-openbi group">
+                            <div className="mb-4 p-3 bg-gray-50 rounded-lg inline-block group-hover:bg-openbi-green/10 transition-colors">
+                                {item.i}
+                            </div>
+                            <div className="text-lg font-bold mb-3">{item.t}</div>
+                            <div className="text-sm text-ink-500 leading-relaxed">{item.d}</div>
+                        </div>
+                    ))}
                 </div>
             </Section>
 

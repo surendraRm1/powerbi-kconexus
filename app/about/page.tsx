@@ -5,16 +5,17 @@ import KumbhatCredibility from "@/components/KumbhatCredibility";
 
 export default function AboutPage() {
     return (
-        <div className="pt-10">
+        <div className="pt-24 pb-12 container-pad">
+            {/* 50 Years of Excellence Hero */}
+            <div className="mb-20">
+                <KumbhatCredibility />
+            </div>
+
             <Section
                 eyebrow="Our Story"
                 title="Revolutionizing Business Intelligence"
                 subtitle="KCOnexus was founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
             >
-                {/* 50 Years of Excellence Section */}
-                <div className="mb-20">
-                    <KumbhatCredibility />
-                </div>
 
                 <div className="max-w-4xl mx-auto mb-20">
                     <div className="space-y-8">

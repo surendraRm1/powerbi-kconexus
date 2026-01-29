@@ -57,6 +57,7 @@ export default function Footer() {
                     <div className="col-span-1">
                         <h3 className="text-white font-bold mb-6 text-lg">Services</h3>
                         <ul className="space-y-3 font-semibold text-white/60">
+                            <li><Link href="/services/nexus-ai" className="hover:text-openbi-green transition-colors">Nexus AI</Link></li>
                             <li><Link href="/services/data-integration" className="hover:text-openbi-green transition-colors">Data Integration</Link></li>
                             <li><Link href="/services/analytics-dashboards" className="hover:text-openbi-green transition-colors">Analytics & Dashboards</Link></li>
                             <li><Link href="/services/process-automation" className="hover:text-openbi-green transition-colors">Process Automation</Link></li>
