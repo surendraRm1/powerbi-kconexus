@@ -2,15 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const technologies = [
-    { name: "Microsoft Power Platform", logo: "⚡" },
-    { name: "Power BI", logo: "📊" },
-    { name: "UiPath", logo: "🤖" },
-    { name: "SQL", logo: "🗄️" },
-    { name: "Python", logo: "🐍" },
-    { name: "Zapier", logo: "⚙️" },
-    { name: "Salesforce", logo: "☁️" },
-];
 
 export default function TechStack() {
     return (
@@ -22,24 +13,20 @@ export default function TechStack() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                {technologies.map((tech, index) => (
-                    <motion.div
-                        key={tech.name}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.05 }}
-                        className="flex flex-col items-center gap-3 group"
-                    >
-                        <div className="w-20 h-20 bg-navy-50 rounded-2xl flex items-center justify-center text-4xl group-hover:bg-openbi-green/10 group-hover:scale-110 transition-all duration-300 shadow-sm">
-                            {tech.logo}
-                        </div>
-                        <span className="text-xs font-semibold text-center text-gray-600 group-hover:text-navy-900 transition-colors">
-                            {tech.name}
-                        </span>
-                    </motion.div>
-                ))}
+            <div className="flex justify-center items-center py-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="w-full max-w-5xl"
+                >
+                    <img
+                        src="/assets/tech-stack-composite.png"
+                        alt="Microsoft Power Platform, Power BI, UiPath, SQL, Python, Zapier, Salesforce"
+                        className="w-full h-auto object-contain"
+                    />
+                </motion.div>
             </div>
 
             <div className="mt-10 text-center">

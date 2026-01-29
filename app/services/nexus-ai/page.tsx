@@ -70,8 +70,8 @@ export default function NexusAIPage() {
                             className="relative z-10 w-full overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(56,189,248,0.15)] border border-white/10"
                         >
                             <img
-                                src="/assets/nexus-ai-phone.jpg"
-                                alt="Nexus AI Mobile Interface"
+                                src="/assets/nexus-ai-chatbot.png"
+                                alt="Nexus AI Chatbot Interface"
                                 className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
                             />
                             {/* Overlay Gradient for depth */}
@@ -84,49 +84,6 @@ export default function NexusAIPage() {
                 </div>
             </section>
 
-            {/* Value Props Section */}
-            <Section className="bg-white py-32" id="solutions">
-                <div className="grid md:grid-cols-3 gap-12">
-                    {[
-                        {
-                            title: "Human-Speed Accuracy",
-                            desc: "Upload any bank or card statement. AI reads every transaction and maps them to the right ledgers automatically.",
-                            icon: <LucideZap className="text-openbi-green" size={32} />,
-                            img: "/assets/nexus-connect-demo.avif"
-                        },
-                        {
-                            title: "Smart Document Matching",
-                            desc: "AI pulls your bills directly, reads the details, and matches each bill to the right transaction. No digging, no errors.",
-                            icon: <LucideScanLine className="text-openbi-green" size={32} />,
-                            img: "/assets/nexus-ocr-demo.avif"
-                        },
-                        {
-                            title: "Works with Your Tools",
-                            desc: "Keep using Tally, Zoho, or SAP. Nexus AI works on your specific accounting setup, just like an in-house expert.",
-                            icon: <LucideRefreshCw className="text-openbi-green" size={32} />,
-                            img: "/assets/nexus-sync-demo.avif"
-                        }
-                    ].map((item, idx) => (
-                        <motion.div
-                            key={item.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.2 }}
-                            className="flex flex-col h-full group"
-                        >
-                            <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-xl border border-gray-100 bg-gray-50">
-                                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                            </div>
-                            <div className="px-2">
-                                <div className="mb-4">{item.icon}</div>
-                                <h3 className="text-2xl font-bold text-navy-900 mb-4">{item.title}</h3>
-                                <p className="text-ink-500 leading-relaxed">{item.desc}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </Section>
 
             {/* How it Works Section */}
             <Section id="how-it-works" title="How Nexus AI Works" eyebrow="The Process" center className="bg-white">
@@ -217,6 +174,50 @@ export default function NexusAIPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Value Props Section */}
+            <Section className="bg-white py-32" id="solutions">
+                <div className="grid md:grid-cols-3 gap-12">
+                    {[
+                        {
+                            title: "Human-Speed Accuracy",
+                            desc: "Upload any bank or card statement. AI reads every transaction and maps them to the right ledgers automatically.",
+                            icon: <LucideZap className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-connect-demo.avif"
+                        },
+                        {
+                            title: "Smart Document Matching",
+                            desc: "AI pulls your bills directly, reads the details, and matches each bill to the right transaction. No digging, no errors.",
+                            icon: <LucideScanLine className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-ocr-demo.avif"
+                        },
+                        {
+                            title: "Works with Your Tools",
+                            desc: "Keep using Tally, Zoho, or SAP. Nexus AI works on your specific accounting setup, just like an in-house expert.",
+                            icon: <LucideRefreshCw className="text-openbi-green" size={32} />,
+                            img: "/assets/nexus-sync-demo.avif"
+                        }
+                    ].map((item, idx) => (
+                        <motion.div
+                            key={item.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.2 }}
+                            className="flex flex-col h-full group"
+                        >
+                            <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-8 shadow-xl border border-gray-100 bg-gray-50">
+                                <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            </div>
+                            <div className="px-2">
+                                <div className="mb-4">{item.icon}</div>
+                                <h3 className="text-2xl font-bold text-navy-900 mb-4">{item.title}</h3>
+                                <p className="text-ink-500 leading-relaxed">{item.desc}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </Section>
 
             {/* Comparison Section - High Impact */}
             <section className="bg-navy-900 py-32 rounded-[4rem] mx-4 my-8 overflow-hidden relative">
