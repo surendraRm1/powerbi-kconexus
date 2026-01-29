@@ -15,7 +15,7 @@ const services = [
         icon: <LucideZap className="text-openbi-green" size={40} />,
     },
     {
-        title: "Power BI & MIS",
+        title: "Power BI",
         slug: "power-bi-mis",
         desc: "Replace spreadsheet chaos with executive dashboards that drive decisions. Get real-time visibility into what matters most to your business.",
         icon: <LucideBarChart4 className="text-openbi-green" size={40} />,

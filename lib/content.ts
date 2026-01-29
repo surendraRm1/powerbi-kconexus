@@ -6,7 +6,7 @@ export const servicesData: Record<string, any> = {
         benefits: ["Unified Data Source", "Real-time Syncing", "Clean Data Pipelines", "Scalable Infrastructure"]
     },
     "power-bi-mis": {
-        title: "Power BI & MIS",
+        title: "Power BI",
         desc: "Transform raw data into beautiful, interactive Power BI dashboards that provide actionable insights for your leadership and operations teams.",
         img: "/assets/sample-finance.png",
         benefits: ["Executive Dashboards", "Interactive Reports", "Operational Insights", "Automated Distribution"]

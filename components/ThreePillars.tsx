@@ -6,7 +6,7 @@ import { LucideBarChart3, LucideZap, LucideNetwork } from "lucide-react";
 
 const pillars = [
     {
-        title: "Power BI & MIS",
+        title: "Power BI",
         description: "Turning raw data into executive-level decisions with real-time visibility and clarity.",
         icon: LucideBarChart3,
         href: "/services/power-bi-mis",

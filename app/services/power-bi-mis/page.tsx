@@ -18,7 +18,7 @@ export default function PowerBIMISPage() {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                            Power BI & MIS<br />
+                            Power BI<br />
                             <span className="text-openbi-green">Analytics & Dashboards.</span>
                         </h1>
 
