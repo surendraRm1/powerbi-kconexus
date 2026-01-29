@@ -13,24 +13,14 @@ import {
     LucideRefreshCw,
     LucideShieldCheck
 } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function NexusAIPage() {
-    const heroRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: heroRef,
-        offset: ["start start", "end start"]
-    });
-
-    const yLeft = useTransform(scrollYProgress, [0, 1], [0, -100]);
-    const yRight = useTransform(scrollYProgress, [0, 1], [0, 100]);
-    const yMain = useTransform(scrollYProgress, [0, 1], [0, -50]);
-
     return (
         <div className="overflow-x-hidden">
             {/* Hero Section - Multi-layered Parallax */}
-            <section ref={heroRef} className="relative hero-gradient overflow-hidden pt-32 pb-24 md:pt-40 md:pb-48">
+            <section className="relative hero-gradient overflow-hidden pt-32 pb-24 md:pt-40 md:pb-48">
                 {/* Background Glows */}
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-openbi-green/10 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-navy-400/10 rounded-full blur-[120px] pointer-events-none" />
@@ -71,37 +61,25 @@ export default function NexusAIPage() {
                         </div>
                     </motion.div>
 
-                    {/* Interactive Hero Assets */}
+                    {/* High-Fidelity Hero Asset */}
                     <div className="relative mt-12 max-w-5xl mx-auto px-4">
-                        <div className="relative w-full max-w-4xl mx-auto min-h-[300px] md:min-h-[500px]">
-                            <motion.img
-                                style={{ y: yMain }}
-                                src="/assets/nexus-hero-main.svg"
-                                alt="AI Accountant Main Interface"
-                                className="relative z-10 w-full h-auto drop-shadow-2xl mx-auto"
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 1.2, delay: 0.4 }}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            className="relative z-10 w-full overflow-hidden rounded-2xl shadow-[0_0_50px_rgba(56,189,248,0.15)] border border-white/10"
+                        >
+                            <img
+                                src="/assets/nexus-hero-v2.png"
+                                alt="Nexus AI Dashboard"
+                                className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
                             />
-                            <motion.img
-                                style={{ y: yLeft }}
-                                src="/assets/nexus-hero-left.svg"
-                                alt="Sync Status"
-                                className="absolute -left-[5%] md:-left-[12%] top-[15%] w-[25%] md:w-[32%] h-auto object-contain z-20 pointer-events-none drop-shadow-2xl"
-                                initial={{ opacity: 0, x: -30 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1, delay: 0.8 }}
-                            />
-                            <motion.img
-                                style={{ y: yRight }}
-                                src="/assets/nexus-hero-right.svg"
-                                alt="Automated Bookkeeping"
-                                className="absolute -right-[8%] md:-right-[18%] top-[5%] w-[35%] md:w-[45%] h-auto object-contain z-0 pointer-events-none drop-shadow-2xl"
-                                initial={{ opacity: 0, x: 30 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1, delay: 1 }}
-                            />
-                        </div>
+                            {/* Overlay Gradient for depth */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 to-transparent pointer-events-none" />
+                        </motion.div>
+
+                        {/* Abstract Glow Background */}
+                        <div className="absolute -inset-4 bg-openbi-green/5 blur-3xl -z-10 rounded-full" />
                     </div>
                 </div>
             </section>
