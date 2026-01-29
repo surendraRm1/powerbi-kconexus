@@ -14,7 +14,7 @@ export default function AboutPage() {
             <Section
                 eyebrow="Our Story"
                 title="Revolutionizing Business Intelligence"
-                subtitle="KCOnexus was founded in December 2021 by Mr. Prashant Dayama and Mr. Surendra to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
+                subtitle="KCOnexus was founded in December 2021 by Mr. Prashant Dayama and our leadership team to lead a new era of data-driven decision-making. Emerging alongside the Power BI revolution, our founders envisioned a firm that would eliminate the delays of traditional reporting through advanced automation."
             >
 
                 <div className="max-w-4xl mx-auto mb-20">
@@ -48,31 +48,45 @@ export default function AboutPage() {
 
 
                 {/* Leadership Section */}
-                <div className="max-w-4xl mx-auto mb-20">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-navy-900 mb-4">Our Leadership</h2>
+                <div className="max-w-6xl mx-auto mb-20">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-navy-900 mb-4">About the Team</h2>
                         <p className="text-ink-500">The visionaries behind Zero-Lag Intelligence</p>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-12">
+                    <div className="grid md:grid-cols-3 gap-12">
+                        {/* Priya Bhansali */}
                         <div className="text-center group">
-                            <div className="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-openbi-green transition-all">
-                                <img src="/assets/test-image.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
+                                <img src="/assets/test-image.png" alt="Priya Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                             </div>
-                            <h3 className="text-xl font-bold text-navy-900">Mr. Prashant Dayama</h3>
-                            <p className="text-openbi-green font-bold text-sm uppercase tracking-wider mb-4">Co-Founder</p>
-                            <p className="text-ink-500 text-sm leading-relaxed">
-                                Driving the strategic vision for KCONexus, Prashant bridges the gap between financial compliance and technical innovation.
+                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Priya Bhansali</h3>
+                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Managing Partner</p>
+                            <p className="text-ink-500 text-sm leading-relaxed px-4">
+                                Managing Partner with 30+ years of expertise in Taxation, FEMA, and Audit. A pioneer at ICAI and Independent Woman Director on the Boards of Listed Companies.
                             </p>
                         </div>
+
+                        {/* Sheilendra Bhansali */}
                         <div className="text-center group">
-                            <div className="w-40 h-40 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-openbi-green transition-all">
-                                <img src="/assets/test-image.png" alt="Mr. Surendra" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
+                                <img src="/assets/test-image.png" alt="Sheilendra Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                             </div>
-                            <h3 className="text-xl font-bold text-navy-900">Mr. Surendra</h3>
-                            <h4 className="text-sm font-bold text-navy-400 mb-2">ACA, CS, B.Com</h4>
-                            <p className="text-openbi-green font-bold text-sm uppercase tracking-wider mb-4">Co-Founder</p>
-                            <p className="text-ink-500 text-sm leading-relaxed">
-                                Leading the technical architecture, Surendra ensures that every dashboard meets the highest standards of data integrity and audit rigor.
+                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Sheilendra Bhansali</h3>
+                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Seasoned Professional</p>
+                            <p className="text-ink-500 text-sm leading-relaxed px-4">
+                                30+ years of experience in Audit, Business Valuation, and Investment Planning. Serves as an Independent Director on the Board of a Listed Company.
+                            </p>
+                        </div>
+
+                        {/* Prashant Dayama */}
+                        <div className="text-center group">
+                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
+                                <img src="/assets/test-image.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                            </div>
+                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Prashant Dayama</h3>
+                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Chartered Accountant</p>
+                            <p className="text-ink-500 text-sm leading-relaxed px-4">
+                                Chartered Accountant with 9+ years of experience in internal/management audits, risk advisory, and MIS reporting. Leads audit and risk assessment projects across various sectors.
                             </p>
                         </div>
                     </div>
