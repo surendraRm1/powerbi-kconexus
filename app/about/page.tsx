@@ -57,7 +57,7 @@ export default function AboutPage() {
                         {/* Priya Bhansali */}
                         <div className="text-center group">
                             <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/test-image.png" alt="Priya Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <img src="/assets/avatar-priya.png" alt="Priya Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                             </div>
                             <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Priya Bhansali</h3>
                             <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Managing Partner</p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
                         {/* Sheilendra Bhansali */}
                         <div className="text-center group">
                             <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/test-image.png" alt="Sheilendra Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <img src="/assets/avatar-sheilendra.png" alt="Sheilendra Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                             </div>
                             <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Sheilendra Bhansali</h3>
                             <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Seasoned Professional</p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                         {/* Prashant Dayama */}
                         <div className="text-center group">
                             <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/test-image.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                <img src="/assets/avatar-prashant.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                             </div>
                             <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Prashant Dayama</h3>
                             <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Chartered Accountant</p>

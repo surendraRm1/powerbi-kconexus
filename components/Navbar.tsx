@@ -19,7 +19,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav shadow-lg" : "bg-navy-900"}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "glass-nav shadow-lg py-0" : "bg-transparent py-4"}`}>
             <div className="container-pad flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center">
                     <span className="text-2xl font-bold text-white">

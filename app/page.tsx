@@ -56,7 +56,7 @@ export default function HomePage() {
 
                     <div className="rounded-3xl border border-gray-100 overflow-hidden shadow-2xl group relative bg-white">
                         <img
-                            src="/assets/test-image.png"
+                            src="/assets/digital-transformation.png"
                             alt="Digital Maturity Transformation"
                             className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                         />
