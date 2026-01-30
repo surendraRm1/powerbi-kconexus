@@ -134,12 +134,6 @@ export default function Hero() {
                                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                             /> */}
 
-                            {/* Play Button Overlay (Purely visual placeholder) */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
-                                <div className="w-16 h-16 bg-openbi-green rounded-full flex items-center justify-center shadow-lg">
-                                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
-                                </div>
-                            </div>
                         </motion.div>
                         {/* Decorative elements */}
                         <div className="absolute -top-10 -right-10 w-40 h-40 bg-openbi-green/20 rounded-full blur-[80px]" />
