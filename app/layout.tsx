@@ -4,7 +4,7 @@ import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import NexusChatbot from "@/components/NexusChatbot";
+// import NexusChatbot from "@/components/NexusChatbot";
 import { site } from "@/lib/site";
 
 const openSans = Open_Sans({
@@ -31,7 +31,7 @@ export default function RootLayout({
                 <main className="min-h-[70vh]">{children}</main>
                 <Footer />
                 <WhatsAppButton />
-                <NexusChatbot />
+                {/* <NexusChatbot /> */}
             </body>
         </html>
     );
