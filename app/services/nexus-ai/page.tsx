@@ -46,7 +46,7 @@ export default function NexusAIPage() {
 
                         <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight">
                             Meet your new <br />
-                            <span className="text-openbi-green">AI Accountant</span>
+                            <span className="text-openbi-green">Nexus AI</span>
                         </h1>
 
                         <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
