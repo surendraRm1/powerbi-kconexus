@@ -84,19 +84,8 @@ export default function Hero() {
                                     Book Automation Preparation
                                 </Link>
                             </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.4 }}
-                            >
-                                <Link
-                                    href="/#resources"
-                                    className="bg-white/10 text-white px-8 py-3 rounded font-semibold hover:bg-white/20 transition-all border border-white/20"
-                                >
-                                    View Sample Dashboard
-                                </Link>
-                            </motion.div>
                         </div>
+
                     </motion.div>
 
                     <motion.div
