@@ -103,7 +103,7 @@ export default function ROICalculator() {
                                             <LucideDollarSign size={18} className="text-openbi-green" />
                                             Avg. Annual Salary
                                         </label>
-                                        <span className="text-openbi-green text-xl font-black">${avgSalary.toLocaleString()}</span>
+                                        <span className="text-openbi-green text-xl font-black">{avgSalary.toLocaleString()}</span>
                                     </div>
                                     <input
                                         type="range" min="10000" max="150000" step="5000" value={avgSalary}
@@ -135,14 +135,14 @@ export default function ROICalculator() {
                                         <span className="text-xs font-black text-openbi-green uppercase tracking-widest">Projected Annual Savings</span>
                                     </div>
                                     <div className="text-6xl md:text-8xl font-black text-white tracking-tighter mb-2">
-                                        ${results.annualSavings.toLocaleString()}
+                                        {results.annualSavings.toLocaleString()}
                                     </div>
                                     <p className="text-white/60 text-lg">Potential recovery through Process Automation</p>
                                 </div>
 
                                 <div className="grid md:grid-cols-3 gap-4">
                                     <div className="bg-white/5 rounded-2xl p-6 border border-white/5 text-center">
-                                        <div className="text-openbi-green text-2xl font-black mb-1">${results.monthlySavings.toLocaleString()}</div>
+                                        <div className="text-openbi-green text-2xl font-black mb-1">{results.monthlySavings.toLocaleString()}</div>
                                         <div className="text-white/40 text-[10px] uppercase font-bold tracking-widest">Monthly Impact</div>
                                     </div>
                                     <div className="bg-white/5 rounded-2xl p-6 border border-white/5 text-center">

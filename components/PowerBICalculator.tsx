@@ -87,7 +87,7 @@ export default function PowerBICalculator() {
                             <div>
                                 <div className="flex justify-between items-end mb-4">
                                     <div className="text-white font-bold">Avg. Annual Salary</div>
-                                    <div className="text-4xl font-black text-openbi-green">${avgSalary.toLocaleString()}</div>
+                                    <div className="text-4xl font-black text-openbi-green">{avgSalary.toLocaleString()}</div>
                                 </div>
                                 <div className="space-y-3">
                                     <input
@@ -103,8 +103,8 @@ export default function PowerBICalculator() {
                                         }}
                                     />
                                     <div className="flex justify-between text-xs text-white/50 px-1">
-                                        <span>$10k</span>
-                                        <span>$150k</span>
+                                        <span>10k</span>
+                                        <span>150k</span>
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ export default function PowerBICalculator() {
 
                             <div className="grid md:grid-cols-2 gap-8 mb-8">
                                 <div className="bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
-                                    <div className="text-5xl font-black text-openbi-green mb-2">${annualMoneySaved.toLocaleString()}</div>
+                                    <div className="text-5xl font-black text-openbi-green mb-2">{annualMoneySaved.toLocaleString()}</div>
                                     <div className="text-white/40 text-xs uppercase tracking-widest font-black">Money Saved / Year</div>
                                 </div>
                                 <div className="bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
@@ -202,7 +202,7 @@ export default function PowerBICalculator() {
                             </div>
 
                             <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
-                                You save <strong className="text-openbi-green">{hoursPerMonth} hours per month</strong>. That's over <strong className="text-openbi-green">${annualMoneySaved.toLocaleString()}</strong> in recovered productive capacity every year.
+                                You save <strong className="text-openbi-green">{hoursPerMonth} hours per month</strong>. That's over <strong className="text-openbi-green">{annualMoneySaved.toLocaleString()}</strong> in recovered productive capacity every year.
                             </p>
                         </div>
 

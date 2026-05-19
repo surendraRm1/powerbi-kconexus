@@ -47,51 +47,6 @@ export default function AboutPage() {
                 </div>
 
 
-                {/* Leadership Section */}
-                <div className="max-w-6xl mx-auto mb-20">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-navy-900 mb-4">About the Team</h2>
-                        <p className="text-ink-500">The visionaries behind Zero-Lag Intelligence</p>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-12">
-                        {/* Priya Bhansali */}
-                        <div className="text-center group">
-                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/avatar-priya.png" alt="Priya Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Priya Bhansali</h3>
-                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Managing Partner</p>
-                            <p className="text-ink-500 text-sm leading-relaxed px-4">
-                                Managing Partner with 30+ years of expertise in Taxation, FEMA, and Audit. A pioneer at ICAI and Independent Woman Director on the Boards of Listed Companies.
-                            </p>
-                        </div>
-
-                        {/* Sheilendra Bhansali */}
-                        <div className="text-center group">
-                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/avatar-sheilendra.png" alt="Sheilendra Bhansali" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Sheilendra Bhansali</h3>
-                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Seasoned Professional</p>
-                            <p className="text-ink-500 text-sm leading-relaxed px-4">
-                                30+ years of experience in Audit, Business Valuation, and Investment Planning. Serves as an Independent Director on the Board of a Listed Company.
-                            </p>
-                        </div>
-
-                        {/* Prashant Dayama */}
-                        <div className="text-center group">
-                            <div className="w-48 h-48 bg-gray-200 rounded-2xl mx-auto mb-6 overflow-hidden border-4 border-white shadow-xl group-hover:border-openbi-green transition-all">
-                                <img src="/assets/avatar-prashant.png" alt="Prashant Dayama" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                            </div>
-                            <h3 className="text-xl font-bold text-navy-900 group-hover:text-openbi-green transition-colors uppercase tracking-tight">Prashant Dayama</h3>
-                            <p className="text-openbi-green font-bold text-xs uppercase tracking-widest mb-4">Chartered Accountant</p>
-                            <p className="text-ink-500 text-sm leading-relaxed px-4">
-                                Chartered Accountant with 9+ years of experience in internal/management audits, risk advisory, and MIS reporting. Leads audit and risk assessment projects across various sectors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Team & Certifications */}
                 <div className="bg-navy-900 rounded-3xl p-10 text-white flex flex-wrap items-center justify-between gap-8 shadow-2xl">
                     <div className="flex-1 min-w-[300px]">

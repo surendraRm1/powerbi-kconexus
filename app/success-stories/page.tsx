@@ -33,7 +33,7 @@ const successStories = [
             "Error rate decreased from 15% to 0.5% (95% improvement)",
             "Invoice approval cycle reduced from 7 days to 2 days",
             "Achieved over 99% accuracy in automated processing",
-            "ROI achieved within 12 months with $133,000 in annual savings",
+            "ROI achieved within 12 months with 133,000 in annual savings",
         ],
         label: "Based on industry case study - to be replaced with KCONexus client story",
     },

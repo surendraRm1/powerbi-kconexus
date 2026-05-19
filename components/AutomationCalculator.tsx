@@ -96,7 +96,7 @@ export default function AutomationCalculator() {
                                 <div>
                                     <div className="flex justify-between items-end mb-4">
                                         <div className="text-white font-bold">Avg. Salary</div>
-                                        <div className="text-2xl font-black text-openbi-green">${(avgSalary / 1000).toFixed(0)}k</div>
+                                        <div className="text-2xl font-black text-openbi-green">{(avgSalary / 1000).toFixed(0)}k</div>
                                     </div>
                                     <input
                                         type="range" min="10000" max="150000" step="5000" value={avgSalary}
@@ -189,7 +189,7 @@ export default function AutomationCalculator() {
 
                             <div className="grid md:grid-cols-2 gap-8 mb-8">
                                 <div className="bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
-                                    <div className="text-5xl font-black text-openbi-green mb-2">${annualMoneySaved.toLocaleString()}</div>
+                                    <div className="text-5xl font-black text-openbi-green mb-2">{annualMoneySaved.toLocaleString()}</div>
                                     <div className="text-white/40 text-xs uppercase tracking-widest font-black">Annual Savings</div>
                                 </div>
                                 <div className="bg-white/5 rounded-2xl p-8 border border-white/10 text-center">
@@ -199,7 +199,7 @@ export default function AutomationCalculator() {
                             </div>
 
                             <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
-                                You recover <strong className="text-openbi-green">{hoursPerMonth} hours/month</strong>. That's a financial gain of <strong className="text-openbi-green">${annualMoneySaved.toLocaleString()}</strong> every single year.
+                                You recover <strong className="text-openbi-green">{hoursPerMonth} hours/month</strong>. That's a financial gain of <strong className="text-openbi-green">{annualMoneySaved.toLocaleString()}</strong> every single year.
                             </p>
                         </div>
 
