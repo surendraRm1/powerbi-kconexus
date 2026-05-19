@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react";
-import { LucideTrendingUp, LucideUsers, LucideClock, LucideDollarSign, LucideArrowRight, LucideCheckCircle2, LucideCalculator } from "lucide-react";
+import { LucideTrendingUp, LucideUsers, LucideClock, LucideArrowRight, LucideCheckCircle2, LucideCalculator } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ROICalculator() {
@@ -100,7 +100,6 @@ export default function ROICalculator() {
                                 <div className="space-y-4 pt-4">
                                     <div className="flex items-center justify-between">
                                         <label className="text-white font-bold flex items-center gap-2">
-                                            <LucideDollarSign size={18} className="text-openbi-green" />
                                             Avg. Annual Salary
                                         </label>
                                         <span className="text-openbi-green text-xl font-black">{avgSalary.toLocaleString()}</span>
